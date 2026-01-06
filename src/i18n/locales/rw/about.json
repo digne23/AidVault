@@ -1,0 +1,58 @@
+{
+  "title": "Ibyerekeye AidVault",
+  "subtitle": "Turi ku ntego yo gutuma gutanga bifashika, bigaragara, kandi bigira ingaruka ku buri wese. Menya twebwe n'impamvu dukora ibyo dukora.",
+  "whoWeAre": "Twebwe Turibo",
+  "platformBuilt": "Urubuga Rwubatswe ku Kubika Bifite Intego",
+  "whoWeAreP1": "AidVault si urubuga rwo kubika gusa - ni umuyoboro. Twizera ko buri wese afite ububasha bwo gukora itandukaniro, kandi ko ibikorwa bito bikomeza bishobora kuzana impinduka ikomeye.",
+  "whoWeAreP2": "Mu gutanga 20% gusa y'ubwizigame bwawe ku burezi bw'abana, uri kwifatanya n'abandi ibihumbi bemeza ko ubunyacyubahiro n'iterambere ry'amafaranga byawe bishobora kujyana hamwe.",
+  "ourStory": "Inkuru Yacu",
+  "storyTitle": "Kuva ku Rugendo rw'Umwana kugeza ku Muyoboro w'Isi",
+  "storyP1": "Umunsi umwe mu gitondo mu cyaro cya Rwanda, uwasize yarebaga umukobwa w'imyaka 8 witwa Uwase yinjira mu ishuri rye nyuma yo kugenda kilometero 5. Yari afite ishyaka ryo kwiga, ariko intebe ye yari irangaye. Nta ikayi. Nta ikaramu. Ubutwari gusa. Ako kanya kahishuye ukuri gukomeye: ubushobozi buriho ahantu hose, ariko amahirwe ntabwo ariho.",
+  "storyP2": "Muri ubwo burambe, AidVault yavutse mu 2025 ifite igitekerezo cyoroshye ariko gishobora: ese kubaka ejo hazaza ryawe ry'amafaranga bishobora no kubaka uburezi bw'umwana? Ese kubika amafaranga bidashobora gusa kurinda ejo, ahubwo bigahindura ubuzima uyu munsi? Intego yacu ni uguhindura kubika kugira ingaruka.",
+  "storyP3": "AidVault ihuza abantu ku isi hose n'abana bakeneye ubufasha, ihindura imyitwarire y'amafaranga ya buri munsi ikaba uburyo bwo kubona uburezi, icyubahiro, n'ibyiringiro. Buri musanzu ufasha gushyira ibikoresho byo kwiga mu ntoki z'abana kandi ugafungura inzugi z'ejo hazaza heza. Ibyatangiriye nk'inkuru y'umwana umwe byahindutse umuyoboro w'isi yose - kuko iyo dushora hamwe, nta mwana ugenda wenyine.",
+  "meetTeam": "Itsinda Ryacu",
+  "teamSubtitle": "Menya Abantu Inyuma ya AidVault",
+  "teamDesc": "Itsinda ryihatira rishyize hamwe n'ukwizera gusangiye ku bubasha bw'uburezi",
+  "ourValues": "Indangagaciro Zacu",
+  "whatWeStandFor": "Ibyo Duharanira",
+  "valuesDesc": "Izi ngingo-ngenganzira ziyobora ibyo dukora byose muri AidVault",
+  "valueTransparency": "Kugaragara",
+  "valueTransparencyDesc": "Buri mutango ukurikiranwa kandi ugatangwa raporo. Uzajya umenya aho umusanzu wawe ugiye n'ingaruka utanga.",
+  "valueEducationFirst": "Uburezi Mbere",
+  "valueEducationFirstDesc": "Twizera ko uburezi ari igikoresho gikomeye cyo guca umuzerereri w'ubukene no kurema impinduka irambye.",
+  "valueCommunity": "Umuryango",
+  "valueCommunityDesc": "Hamwe, dukomera. Urubuga rwacu ruhuza abantu bafite intego imwe biyemeje gukora itandukaniro.",
+  "valueTrust": "Icyizere",
+  "valueTrustDesc": "Dukorana gusa n'inshuti z'uburezi zemejwe kandi tugaha ubugaragarire bwuzuye mu bikorwa byacu byose.",
+  "valueImpact": "Ingaruka Zipimika",
+  "valueImpactDesc": "Buri mubare dukurikirana uhuza n'ibisubizo nyabyo ku bana nyayo mu mashuri nyayo.",
+  "joinCommunity": "Witeguye Kwifatanya n'Umuryango Wacu?",
+  "joinCommunityDesc": "Tangira urugendo rwawe rwo kubika uyu munsi kandi ube igice cy'umuyoboro urimo guhindura ubuzima bw'abana.",
+  "createYourAccount": "Fungura Konti Yawe",
+  "founded": "Byashinzwe",
+  "countries": "Ibihugu",
+  "donors": "Abatanga",
+  "transparent": "Kugaragara",
+  "team": [
+    {
+      "name": "Mlle. Mwiza Daisy",
+      "role": "Uwasize & Umuyobozi Mukuru",
+      "bio": "Umuyobozi ufite intego ifite icyerekezo kigaragara cyo gukoresha ibishya mu by'amafaranga kugira ngo haguke uburyo bwo kubona uburezi. Mlle. Mwiza yashinze AidVault kugira ngo ahuze ubwizigame bw'isi n'ingaruka z'aho hantu, ayobora ingamba z'urugaga, ubufatanye, n'iterambere rirambye kugira ngo atange amahirwe y'uburezi ahoraho ku bana."
+    },
+    {
+      "name": "Bwana Sugira Digne",
+      "role": "Umuyobozi Mukuru wa Tekinoloji",
+      "bio": "Umuhanga mu gukora porogaramu n'umubaji wa sisitemu wihariye mu mbuga z'amafaranga zifite umutekano kandi zaguka. Bwana Sugira ayobora ingamba za tekinoloji za AidVault, arinda umutekano wa sisitemu, kurinda amakuru n'imikorere mu gihe ahindura intego z'ingaruka ku mibereho mu bisubizo bya numerike byizewe."
+    },
+    {
+      "name": "Bwana Nshuti Daniel",
+      "role": "Umuyobozi w'Ubufatanye",
+      "bio": "Umuyobozi w'ubufatanye bw'ingamba ushinzwe kubaka no gucunga imishyikirano n'ibigo by'imari, ONG, abatanga, n'abafatanyabikorwa b'akarere. Bwana Nshuti ashishikariza ubufatanye no gukusanya imikoreshereze kugira ngo haguke ingaruka za AidVault muri Afurika y'Iburasirazuba no hirenze."
+    },
+    {
+      "name": "Bwana Uwayezu Michael",
+      "role": "Umuyobozi w'Umuryango",
+      "bio": "Umuyobozi w'ubufatanye n'umuryango ushishikaye ku gukomeza imishyikirano n'amashuri, imiryango, n'abafatanyabikorwa b'aho hantu. Bwana Uwayezu areba ko gahunda ziyoborwa n'umuryango, zikora neza, kandi zihuye n'ibyo abana bakeneye ku mugaragaro."
+    }
+  ]
+}

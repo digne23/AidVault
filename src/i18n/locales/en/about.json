@@ -1,0 +1,58 @@
+{
+  "title": "About AidVault",
+  "subtitle": "We're on a mission to make charitable giving accessible, transparent, and impactful for everyone. Learn about who we are and why we do what we do.",
+  "whoWeAre": "Who We Are",
+  "platformBuilt": "A Platform Built for Purposeful Saving",
+  "whoWeAreP1": "AidVault is more than a savings platform—it's a movement. We believe that everyone has the power to make a difference, and that small, consistent actions can lead to transformative change.",
+  "whoWeAreP2": "By committing just 20% of your savings to children's education, you're joining thousands of others who are proving that generosity and personal financial growth can go hand in hand.",
+  "ourStory": "Our Story",
+  "storyTitle": "From One Child's Journey to a Global Movement",
+  "storyP1": "One morning in rural Rwanda, our founder watched an 8-year-old girl named Uwase walk into her classroom after a 5-kilometer journey. She was eager to learn—but her desk was empty. No notebook. No pencil. Only determination. That moment revealed a powerful truth: potential is everywhere, but opportunity is not.",
+  "storyP2": "From that experience, AidVault was born in 2025 with a simple but bold idea—what if building your financial future could also build a child's education? What if saving money didn't just secure tomorrow, but changed a life today? Our mission is to transform saving into impact.",
+  "storyP3": "AidVault connects people around the world with children in need, turning everyday financial habits into access to education, dignity, and hope. Every contribution helps place learning tools into young hands and opens doors to a brighter future. What began as one child's story has grown into a global movement—because when we invest together, no child walks alone.",
+  "meetTeam": "Our Team",
+  "teamSubtitle": "Meet the People Behind AidVault",
+  "teamDesc": "A dedicated team united by a shared belief in the power of education",
+  "ourValues": "Our Values",
+  "whatWeStandFor": "What We Stand For",
+  "valuesDesc": "These principles guide everything we do at AidVault",
+  "valueTransparency": "Transparency",
+  "valueTransparencyDesc": "Every donation is tracked and reported. You'll always know exactly where your contribution goes and the impact it makes.",
+  "valueEducationFirst": "Education First",
+  "valueEducationFirstDesc": "We believe education is the most powerful tool for breaking cycles of poverty and creating lasting change.",
+  "valueCommunity": "Community",
+  "valueCommunityDesc": "Together, we're stronger. Our platform connects like-minded individuals committed to making a difference.",
+  "valueTrust": "Trust",
+  "valueTrustDesc": "We work only with verified educational partners and provide complete transparency in all our operations.",
+  "valueImpact": "Measurable Impact",
+  "valueImpactDesc": "Every metric we track ties back to real outcomes for real children in real classrooms.",
+  "joinCommunity": "Ready to Join Our Community?",
+  "joinCommunityDesc": "Start your savings journey today and become part of a movement that's changing children's lives.",
+  "createYourAccount": "Create Your Account",
+  "founded": "Founded",
+  "countries": "Countries",
+  "donors": "Donors",
+  "transparent": "Transparent",
+  "team": [
+    {
+      "name": "Miss. Mwiza Daisy",
+      "role": "Founder & CEO",
+      "bio": "A purpose-driven leader with a clear vision for using financial innovation to expand access to education. Miss. Mwiza founded AidVault to bridge global savings with local impact, leading organizational strategy, partnerships, and long-term growth to deliver sustainable educational opportunities for children."
+    },
+    {
+      "name": "Mr. Sugira Digne",
+      "role": "Chief Technology Officer",
+      "bio": "A senior software engineer and systems architect specializing in secure, scalable financial platforms. Mr. Sugira oversees AidVault's technology strategy, ensuring system integrity, data protection, and performance while translating social-impact goals into reliable digital solutions."
+    },
+    {
+      "name": "Dr. Nshuti Daniel",
+      "role": "Head of Partnerships",
+      "bio": "A strategic partnership leader responsible for building and managing relationships with financial institutions, NGOs, donors, and regional stakeholders. Mr. Nshuti drives collaboration and resource mobilization to scale AidVault's impact across East Africa and beyond."
+    },
+    {
+      "name": "Dr. Ishimwe Melissa",
+      "role": "Community Director",
+      "bio": "A community engagement leader focused on strengthening relationships with schools, families, and local partners. Dr.Melissa ensures programs are community-led, effective, and aligned with the real needs of children on the ground."
+    }
+  ]
+}

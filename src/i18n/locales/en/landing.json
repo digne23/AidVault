@@ -1,0 +1,51 @@
+{
+  "trustedBy": "Trusted by {{count}}+ donors worldwide",
+  "heroTitle1": "Save. Give.",
+  "heroTitle2": "Transform Lives.",
+  "heroSubtitle": "Build your savings while automatically contributing 20% to children's education. Every 6 months, your vault helps transform a child's future.",
+  "startSaving": "Start Saving Today",
+  "learnHowItWorks": "Learn How It Works",
+  "howItWorksTitle": "How AidVault Works",
+  "howItWorksSubtitle": "A simple three-step process that turns your savings into meaningful impact",
+  "step": "Step {{number}}",
+  "stepSaveTitle": "Save",
+  "stepSaveDesc": "Build your vault over 6 months by depositing any amount, any time. Your money grows while you prepare to give.",
+  "stepGiveTitle": "Give",
+  "stepGiveDesc": "After 6 months, donate 20% of your savings to children's education. You keep 80% while making a real difference.",
+  "stepImpactTitle": "Impact",
+  "stepImpactDesc": "Watch your contribution change lives. Every donation provides school supplies and educational materials to children in need.",
+  "learnMoreProcess": "Learn more about our process",
+  "collectiveImpact": "Our Collective Impact",
+  "collectiveImpactSubtitle": "Together, our community is making a real difference in children's lives",
+  "totalDonated": "Total Donated",
+  "activeDonors": "Active Donors",
+  "childrenHelped": "Children Helped",
+  "missionTitle": "Our Mission",
+  "missionSubtitle": "Making Education Accessible for Every Child",
+  "missionDesc": "AidVault was founded on a simple belief: that everyone can make a difference when given the right tools. We've created a platform that makes charitable giving not just possible, but effortless and rewarding.",
+  "readFullMission": "Read Our Full Mission",
+  "testimonialTitle": "What Our Donors Say",
+  "testimonialSubtitle": "Join thousands of people who are already making a difference",
+  "readyToMakeDifference": "Ready to Make a Difference?",
+  "joinCommunity": "Join our community of generous savers and start your journey towards meaningful impact. It only takes a few minutes to set up your vault.",
+  "createFreeAccount": "Create Your Free Account",
+  "viewPublicDashboard": "View Public Dashboard",
+  "noCreditCard": "No credit card required. Start with any amount.",
+  "testimonials": [
+    {
+      "name": "Kate Scott",
+      "role": "Active Donor since 2025",
+      "quote": "AidVault has transformed the way I approach saving. Knowing that part of my savings directly supports children's education gives real purpose to every contribution."
+    },
+    {
+      "name": "Nkurunziza Kevin",
+      "role": "Community Leader",
+      "quote": "What distinguishes AidVault is its transparency. The platform clearly shows how funds are used and the impact they create, which builds trust and confidence in the mission."
+    },
+    {
+      "name": "Ikirezi Bella",
+      "role": "Monthly Contributor",
+      "quote": "AidVault allows me to plan for my own future while contributing to someone else's education. The balance they've created makes saving both practical and meaningful."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "pageNotFound": "Page Not Found",
+  "pageNotFoundDesc": "Oops! The page you're looking for doesn't exist or has been moved. Don't worry, let's get you back on track.",
+  "youMightWantTo": "You might want to:",
+  "checkUrl": "Check if the URL is correct",
+  "goBackPrevious": "Go back to the previous page",
+  "visitHomepage": "Visit our homepage to start fresh",
+  "goBack": "Go Back",
+  "backToHome": "Back to Home",
+  "popularPages": "Popular pages:",
+  "somethingWentWrong": "Something went wrong",
+  "somethingWentWrongDesc": "We're sorry, but something unexpected happened. Please try again or return to the home page.",
+  "tryAgain": "Try Again",
+  "goHome": "Go Home",
+  "problemPersists": "If this problem persists, please",
+  "contactSupport": "contact support",
+  "failedToLoad": "Failed to load",
+  "errorBoundary": {
+    "title": "Something went wrong",
+    "description": "We're sorry, but something unexpected happened. Please try again or return to the home page."
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Our Mission",
+  "missionStatement": "To make quality education accessible to every child, everywhere, through the collective power of purposeful saving.",
+  "missionBelief": "We believe that when people save with intention and give with transparency, we can create lasting change in communities around the world.",
+  "visionTitle": "Our Vision",
+  "visionSubtitle": "A World Where Every Child Has the Tools to Learn",
+  "visionP1": "We envision a future where no child is denied education due to lack of resources. Where school supplies, books, and learning materials are available to every student, regardless of their economic circumstances.",
+  "visionP2": "Through AidVault, we're building a global community of savers who understand that their personal financial goals can coexist with—and even amplify—their desire to give back.",
+  "visionP3": "Our vision is not just about providing supplies. It's about creating a sustainable model where generosity becomes a natural part of financial planning, and where the impact of giving is visible, measurable, and meaningful.",
+  "universalAccess": "Universal Access",
+  "universalAccessDesc": "Every child deserves education",
+  "sustainableImpact": "Sustainable Impact",
+  "sustainableImpactDesc": "Long-term change, not just aid",
+  "globalCommunity": "Global Community",
+  "globalCommunityDesc": "United in purpose",
+  "whyEducation": "Why Education?",
+  "educationEqualizer": "Education: The Great Equalizer",
+  "educationEqualizerDesc": "Of all the ways to create positive change, we chose education for one simple reason: it works.",
+  "breaksCycle": "Breaks the Cycle",
+  "breaksCycleDesc": "Children who receive quality education are 2x more likely to escape poverty and contribute positively to their communities. Education creates opportunities that ripple across generations.",
+  "highImpact": "High Impact, Low Cost",
+  "highImpactDesc": "Just 60000 RWF can provide a child with school supplies for an entire year. That's one of the highest returns on investment in charitable giving—tangible results for modest contributions.",
+  "empowersCommunities": "Empowers Communities",
+  "empowersCommunitiesDesc": "Educated children grow into community leaders, teachers, doctors, and entrepreneurs. By investing in education, we're investing in the future leadership of entire regions.",
+  "goalsTitle": "Our Goals",
+  "goalsSubtitle": "Measurable Targets, Real Results",
+  "goalsDesc": "We set ambitious but achievable goals and track our progress transparently",
+  "goals": [
+    {
+      "target": "10,000",
+      "description": "Children with access to quality education by 2026"
+    },
+    {
+      "target": "500K RWF",
+      "description": "In educational resources distributed by 2025"
+    },
+    {
+      "target": "50",
+      "description": "Partner schools across 20 countries"
+    },
+    {
+      "target": "25K",
+      "description": "Active donors in our global community"
+    }
+  ],
+  "transparency": "Transparency",
+  "whereYourDonationsGo": "Where Your Donations Go",
+  "transparencyDesc": "We believe you deserve complete transparency about how your contributions are used. Here's exactly how we allocate every dollar donated through AidVault.",
+  "fundAllocation": {
+    "schoolSupplies": "School Supplies",
+    "learningMaterials": "Learning Materials",
+    "teacherSupport": "Teacher Support",
+    "infrastructure": "Infrastructure",
+    "operations": "Operations"
+  },
+  "goesToPrograms": "Goes directly to programs",
+  "joinMission": "Join Us in This Mission",
+  "joinMissionDesc": "Every saver who joins AidVault becomes part of something bigger. Start your journey today and help us reach our goals.",
+  "startSavingToday": "Start Saving Today",
+  "learnAboutUs": "Learn About Us"
+}

@@ -1,0 +1,59 @@
+{
+  "addFundsModal": {
+    "title": "Add Funds",
+    "currentBalance": "Current balance:",
+    "amount": "Amount",
+    "quickSelect": "Quick Select",
+    "donationInfo": "20% of your savings will be donated to children's education after 6 months. The remaining 80% stays yours.",
+    "processing": "Processing...",
+    "addAmount": "Add {{amount}} RWF",
+    "invalidAmount": "Please enter a valid amount",
+    "failedToAdd": "Failed to Add Funds",
+    "fundsAdded": "Funds Added!",
+    "fundsAddedDesc": "{{amount}} RWF has been added to your vault"
+  },
+  "impactCalculator": {
+    "childFullYear": "child's full year of education",
+    "childrenTuition6Months": "children's tuition for 6 months",
+    "childTuition6Months": "child's tuition for 6 months",
+    "childrenTuition3Months": "children's tuition for 3 months",
+    "childTuition3Months": "child's tuition for 3 months",
+    "childrenTuition1Month": "children's tuition for 1 month",
+    "childTuition1Month": "child's tuition for 1 month",
+    "monthsOfSchoolSupplies": "months of school supplies",
+    "monthOfSchoolSupplies": "month of school supplies",
+    "weeksOfSchoolMeals": "weeks of school meals",
+    "weekOfSchoolMeals": "week of school meals",
+    "notebookAndPencilSets": "notebook and pencil sets",
+    "notebookAndPencilSet": "notebook and pencil set",
+    "notebooksAndPencils": "notebooks and pencils",
+    "notebookAndPencils": "notebook and pencils",
+    "everyDollarHelps": "Every dollar helps!",
+    "enterAmountToSee": "Enter an amount to see your potential impact",
+    "yourDonationOf": "Your donation of",
+    "canProvide": "Can provide:",
+    "everyContribution": "Every contribution, no matter how small, helps make education accessible.",
+    "impactEstimates": "Impact estimates based on average costs in our partner regions",
+    "moreImpacts": "+{{count}} more"
+  },
+  "emptyState": {
+    "noTransactionsTitle": "No Transactions Yet",
+    "noTransactionsDesc": "Start building your vault by adding your first funds. Every step counts towards making a difference!",
+    "addFirstFunds": "Add Your First Funds",
+    "noDonationsTitle": "No Donations Yet",
+    "noDonationsDesc": "Complete your saving period to unlock donations and start making a real impact on children's education.",
+    "viewYourVault": "View Your Vault",
+    "noResultsTitle": "No Results Found",
+    "noResultsDesc": "We couldn't find anything matching your search. Try adjusting your filters or search terms.",
+    "clearFilters": "Clear Filters",
+    "noDataTitle": "No Data Available",
+    "noDataDesc": "There's no data to display yet. Check back later!"
+  },
+  "spinner": {
+    "loading": "Loading"
+  },
+  "toast": {
+    "dismiss": "Dismiss",
+    "notifications": "Notifications"
+  }
+}

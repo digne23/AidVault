@@ -1,0 +1,78 @@
+{
+  "title": "How AidVault Works",
+  "subtitle": "A simple, transparent process that turns your savings into real impact. Here's everything you need to know about saving with purpose.",
+  "processTitle": "The Process",
+  "processSubtitle": "Five Simple Steps to Make a Difference",
+  "processDesc": "From sign-up to impact—here's your journey with AidVault",
+  "steps": [
+    {
+      "title": "Create Your Account",
+      "description": "Sign up in minutes with just your email. No credit checks, no hidden fees. Your journey to purposeful saving starts here."
+    },
+    {
+      "title": "Add Funds to Your Vault",
+      "description": "Deposit money anytime you want. There's no minimum—start with what you're comfortable with and build from there."
+    },
+    {
+      "title": "Watch Your Savings Grow",
+      "description": "Track your progress on your personal dashboard. See your balance grow and watch your potential impact increase in real-time."
+    },
+    {
+      "title": "Donate 20% to Education",
+      "description": "After 6 months, you become eligible to donate. 20% of your savings goes directly to providing school supplies and educational materials."
+    },
+    {
+      "title": "See Your Impact & Repeat",
+      "description": "Receive updates on how your donation helped. Then start a new savings cycle and continue making a difference."
+    }
+  ],
+  "journeyTitle": "Your Savings Journey",
+  "journeySubtitle": "Watch Your Impact Grow Over Time",
+  "journeyDesc": "Every time you add funds to your vault, you're not just saving for yourself—you're investing in a child's future. Here's what your journey looks like:",
+  "journeyFeatures": [
+    "Real-time balance tracking",
+    "Visual progress toward your donation goal",
+    "Complete transaction history",
+    "Countdown to donation eligibility"
+  ],
+  "yourVaultBalance": "Your Vault Balance",
+  "progressToDonation": "Progress to Donation",
+  "daysUntilEligible": "{{days}} days until eligible to donate",
+  "projectedDonation": "Projected Donation (20%)",
+  "projectedImpact": "Enough for {{count}} children's school supplies",
+  "recentActivity": "Recent Activity",
+  "deposit": "Deposit",
+  "faqTitle": "FAQ",
+  "faqSubtitle": "Frequently Asked Questions",
+  "faqDesc": "Everything you need to know about saving and giving with AidVault",
+  "faqs": [
+    {
+      "question": "Why 6 months?",
+      "answer": "The 6-month period helps you build a meaningful savings habit while accumulating enough to make a real impact. It also allows us to batch donations for maximum efficiency, reducing administrative costs and ensuring more of your contribution reaches children in need."
+    },
+    {
+      "question": "Why 20%?",
+      "answer": "The 20% commitment is designed to be impactful yet sustainable. It allows you to save for your own goals while making a significant contribution to education. Many of our users find this balance motivating—you're building your future while investing in someone else's."
+    },
+    {
+      "question": "Where does my donation go?",
+      "answer": "100% of your donation goes to educational supplies and materials for children in need. We work with verified partner schools and organizations in 15+ countries. Every donation is tracked, and you'll receive updates on the specific impact your contribution made."
+    },
+    {
+      "question": "Can I donate more than 20%?",
+      "answer": "Absolutely! When you reach your 6-month milestone, you can choose to donate anywhere from 20% up to 100% of your savings. Many users choose to give more when they're able, and every additional amount makes a bigger difference."
+    },
+    {
+      "question": "Can I withdraw my savings?",
+      "answer": "Yes, your money is always yours. However, we encourage you to complete the 6-month cycle to maximize your impact. If you need to withdraw early, you can do so at any time, though the 20% commitment would apply to future savings cycles."
+    },
+    {
+      "question": "Is my money safe?",
+      "answer": "Your funds are secured with bank-level encryption and held in regulated financial accounts. We use industry-standard security measures including 256-bit SSL encryption and two-factor authentication to protect your account and funds."
+    }
+  ],
+  "startJourney": "Ready to Start Your Journey?",
+  "startJourneyDesc": "Join thousands of savers who are making a difference in children's lives while building their own financial future.",
+  "createFreeAccount": "Create Your Free Account",
+  "learnAboutUs": "Learn About Us"
+}

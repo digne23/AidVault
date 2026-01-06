@@ -1,0 +1,22 @@
+{
+  "pageNotFound": "Page non trouvée",
+  "pageNotFoundDesc": "Oups! La page que vous recherchez n'existe pas ou a été déplacée. Ne vous inquiétez pas, remettons-vous sur la bonne voie.",
+  "youMightWantTo": "Vous pourriez vouloir:",
+  "checkUrl": "Vérifier si l'URL est correcte",
+  "goBackPrevious": "Retourner à la page précédente",
+  "visitHomepage": "Visiter notre page d'accueil pour recommencer",
+  "goBack": "Retour",
+  "backToHome": "Retour à l'accueil",
+  "popularPages": "Pages populaires:",
+  "somethingWentWrong": "Une erreur s'est produite",
+  "somethingWentWrongDesc": "Nous sommes désolés, mais quelque chose d'inattendu s'est produit. Veuillez réessayer ou retourner à la page d'accueil.",
+  "tryAgain": "Réessayer",
+  "goHome": "Aller à l'accueil",
+  "problemPersists": "Si ce problème persiste, veuillez",
+  "contactSupport": "contacter le support",
+  "failedToLoad": "Échec du chargement",
+  "errorBoundary": {
+    "title": "Une erreur s'est produite",
+    "description": "Nous sommes désolés, mais quelque chose d'inattendu s'est produit. Veuillez réessayer ou retourner à la page d'accueil."
+  }
+}

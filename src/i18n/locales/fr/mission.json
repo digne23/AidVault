@@ -1,0 +1,61 @@
+{
+  "title": "Notre Mission",
+  "missionStatement": "Rendre l'\u00e9ducation de qualit\u00e9 accessible \u00e0 chaque enfant, partout, gr\u00e2ce au pouvoir collectif de l'\u00e9pargne intentionnelle.",
+  "missionBelief": "Nous croyons que lorsque les gens \u00e9pargnent avec intention et donnent avec transparence, nous pouvons cr\u00e9er un changement durable dans les communaut\u00e9s du monde entier.",
+  "visionTitle": "Notre Vision",
+  "visionSubtitle": "Un monde o\u00f9 chaque enfant a les outils pour apprendre",
+  "visionP1": "Nous envisageons un avenir o\u00f9 aucun enfant ne se voit refuser l'\u00e9ducation en raison du manque de ressources. O\u00f9 les fournitures scolaires, les livres et le mat\u00e9riel p\u00e9dagogique sont disponibles pour chaque \u00e9l\u00e8ve, ind\u00e9pendamment de leur situation \u00e9conomique.",
+  "visionP2": "Gr\u00e2ce \u00e0 AidVault, nous construisons une communaut\u00e9 mondiale d'\u00e9pargnants qui comprennent que leurs objectifs financiers personnels peuvent coexister avec - et m\u00eame amplifier - leur d\u00e9sir de redonner.",
+  "visionP3": "Notre vision n'est pas seulement de fournir des fournitures. C'est de cr\u00e9er un mod\u00e8le durable o\u00f9 la g\u00e9n\u00e9rosit\u00e9 devient une partie naturelle de la planification financi\u00e8re, et o\u00f9 l'impact du don est visible, mesurable et significatif.",
+  "universalAccess": "Acc\u00e8s universel",
+  "universalAccessDesc": "Chaque enfant m\u00e9rite une \u00e9ducation",
+  "sustainableImpact": "Impact durable",
+  "sustainableImpactDesc": "Changement \u00e0 long terme, pas seulement de l'aide",
+  "globalCommunity": "Communaut\u00e9 mondiale",
+  "globalCommunityDesc": "Unis dans un but commun",
+  "whyEducation": "Pourquoi l'\u00e9ducation?",
+  "educationEqualizer": "L'\u00e9ducation: Le grand \u00e9galisateur",
+  "educationEqualizerDesc": "De toutes les fa\u00e7ons de cr\u00e9er un changement positif, nous avons choisi l'\u00e9ducation pour une raison simple: \u00e7a fonctionne.",
+  "breaksCycle": "Brise le cycle",
+  "breaksCycleDesc": "Les enfants qui re\u00e7oivent une \u00e9ducation de qualit\u00e9 ont 2 fois plus de chances de sortir de la pauvret\u00e9 et de contribuer positivement \u00e0 leurs communaut\u00e9s. L'\u00e9ducation cr\u00e9e des opportunit\u00e9s qui se r\u00e9percutent sur les g\u00e9n\u00e9rations.",
+  "highImpact": "Fort impact, faible co\u00fbt",
+  "highImpactDesc": "Seulement 50$ peuvent fournir \u00e0 un enfant des fournitures scolaires pour une ann\u00e9e enti\u00e8re. C'est l'un des meilleurs retours sur investissement dans les dons charitables - des r\u00e9sultats tangibles pour des contributions modestes.",
+  "empowersCommunities": "Renforce les communaut\u00e9s",
+  "empowersCommunitiesDesc": "Les enfants \u00e9duqu\u00e9s deviennent des leaders communautaires, des enseignants, des m\u00e9decins et des entrepreneurs. En investissant dans l'\u00e9ducation, nous investissons dans le leadership futur de r\u00e9gions enti\u00e8res.",
+  "goalsTitle": "Nos objectifs",
+  "goalsSubtitle": "Objectifs mesurables, r\u00e9sultats r\u00e9els",
+  "goalsDesc": "Nous fixons des objectifs ambitieux mais r\u00e9alisables et suivons notre progression de mani\u00e8re transparente",
+  "goals": [
+    {
+      "target": "10 000",
+      "description": "Enfants avec acc\u00e8s \u00e0 une \u00e9ducation de qualit\u00e9 d'ici 2026"
+    },
+    {
+      "target": "500K RWF",
+      "description": "En ressources \u00e9ducatives distribu\u00e9es d'ici 2025"
+    },
+    {
+      "target": "50",
+      "description": "\u00c9coles partenaires dans 20 pays"
+    },
+    {
+      "target": "25K",
+      "description": "Donateurs actifs dans notre communaut\u00e9 mondiale"
+    }
+  ],
+  "transparency": "Transparence",
+  "whereYourDonationsGo": "O\u00f9 vont vos dons",
+  "transparencyDesc": "Nous croyons que vous m\u00e9ritez une transparence compl\u00e8te sur la fa\u00e7on dont vos contributions sont utilis\u00e9es. Voici exactement comment nous allouons chaque dollar donn\u00e9 via AidVault.",
+  "fundAllocation": {
+    "schoolSupplies": "Fournitures scolaires",
+    "learningMaterials": "Mat\u00e9riel p\u00e9dagogique",
+    "teacherSupport": "Soutien aux enseignants",
+    "infrastructure": "Infrastructure",
+    "operations": "Op\u00e9rations"
+  },
+  "goesToPrograms": "Va directement aux programmes",
+  "joinMission": "Rejoignez-nous dans cette mission",
+  "joinMissionDesc": "Chaque \u00e9pargnant qui rejoint AidVault devient partie de quelque chose de plus grand. Commencez votre parcours aujourd'hui et aidez-nous \u00e0 atteindre nos objectifs.",
+  "startSavingToday": "Commencez \u00e0 \u00e9pargner aujourd'hui",
+  "learnAboutUs": "En savoir plus sur nous"
+}

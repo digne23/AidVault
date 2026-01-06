@@ -1,0 +1,61 @@
+{
+  "title": "Intego Yacu",
+  "missionStatement": "Gutuma uburezi bw'ubwiza buri mwana bugeraho, ahantu hose, binyuze ku bubasha busangiwe bwo kubika ku ntego.",
+  "missionBelief": "Twizera ko abantu nibabika ku ntego kandi bagatanga mu bugaragarire, dushobora kurema impinduka irambye mu miryango ku isi hose.",
+  "visionTitle": "Icyerekezo Cyacu",
+  "visionSubtitle": "Isi Aho Buri Mwana Afite Ibikoresho byo Kwiga",
+  "visionP1": "Turebye ejo hazaza aho nta mwana uburizwamo uburezi kubera kubura ibikoresho. Aho ibikoresho by'ishuri, ibitabo, n'ibikoresho by'uburezi byagerwa na buri mwanyeshuri, hatitawe ku miterere y'ubukungu bwabo.",
+  "visionP2": "Binyuze muri AidVault, turimo kubaka umuryango w'isi wose w'ababika bazi ko intego zabo bwite z'amafaranga zishobora kubana - kandi no kongeraho - icyifuzo cyabo cyo gusubira.",
+  "visionP3": "Icyerekezo cyacu si ugutanga ibikoresho gusa. Ni uguha inzira irambye aho ubunyacyubahiro buba igice kamere cyo gucunga amafaranga, kandi aho ingaruka zo gutanga zigaragara, zipimika, kandi zifite icyo bivuze.",
+  "universalAccess": "Kugerwaho na Bose",
+  "universalAccessDesc": "Buri mwana akwiye uburezi",
+  "sustainableImpact": "Ingaruka Zirambye",
+  "sustainableImpactDesc": "Impinduka y'igihe kirekire, si ubufasha gusa",
+  "globalCommunity": "Umuryango w'Isi",
+  "globalCommunityDesc": "Dushyize hamwe ku ntego",
+  "whyEducation": "Kuki Uburezi?",
+  "educationEqualizer": "Uburezi: Iringaniza Rikomeye",
+  "educationEqualizerDesc": "Mu nzira zose zo kurema impinduka nziza, twahisemo uburezi ku mpamvu imwe yoroshye: birakora.",
+  "breaksCycle": "Guca Umuzerereri",
+  "breaksCycleDesc": "Abana babona uburezi bwiza bashobora kabiri gusohoka mu bukene no gutanga neza mu miryango yabo. Uburezi burema amahirwe ashingira mu bihe bitaha.",
+  "highImpact": "Ingaruka Nyinshi, Igiciro Gito",
+  "highImpactDesc": "Gusa $50 ishobora guha umwana ibikoresho by'ishuri by'umwaka wose. Ni kimwe mu bisubizo bya hejuru ku gushora mu gutanga - ibisubizo bigaragara ku musanzu muto.",
+  "empowersCommunities": "Gukomeza Imiryango",
+  "empowersCommunitiesDesc": "Abana bize bakura bakaba abayobozi b'umuryango, abarimu, abaganga, n'abashoramari. Mu gushora mu burezi, turi gushora mu buyobozi bw'ejo hazaza h'akarere.",
+  "goalsTitle": "Intego Zacu",
+  "goalsSubtitle": "Intego Zipimika, Ibisubizo Nyayo",
+  "goalsDesc": "Dushyiraho intego z'ubushake ariko zishoboka kandi dukurikirana aho tugeze mu bugaragarire",
+  "goals": [
+    {
+      "target": "10,000",
+      "description": "Abana bagera ku burezi bw'ubwiza kuva 2026"
+    },
+    {
+      "target": "500K RWF",
+      "description": "Mu bikoresho by'uburezi byatanzwe kuva 2025"
+    },
+    {
+      "target": "50",
+      "description": "Amashuri y'abaparineri mu bihugu 20"
+    },
+    {
+      "target": "25K",
+      "description": "Abatanga bakora mu muryango wacu w'isi"
+    }
+  ],
+  "transparency": "Kugaragara",
+  "whereYourDonationsGo": "Aho Impano Zawe Zigenda",
+  "transparencyDesc": "Twizera ko ukwiye kugaragarirwa uko imisanzu yawe ikoreshwa. Dore uko tugabanya buri dola yatanzwe binyuze muri AidVault.",
+  "fundAllocation": {
+    "schoolSupplies": "Ibikoresho by'Ishuri",
+    "learningMaterials": "Ibikoresho byo Kwiga",
+    "teacherSupport": "Ubufasha bw'Umwarimu",
+    "infrastructure": "Ibikorwa Remezo",
+    "operations": "Ibikorwa"
+  },
+  "goesToPrograms": "Bijya ku gahunda bitaziguye",
+  "joinMission": "Ifatanye Natwe Muri Iyi Ntego",
+  "joinMissionDesc": "Buri muntu ubika wifatanya na AidVault aba igice cy'ikintu kinini. Tangira urugendo rwawe uyu munsi kandi udufashe kugera ku ntego zacu.",
+  "startSavingToday": "Tangira Kubika Uyu Munsi",
+  "learnAboutUs": "Menya Ibyerekeye Twebwe"
+}

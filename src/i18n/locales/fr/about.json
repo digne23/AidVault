@@ -1,0 +1,58 @@
+{
+  "title": "\u00c0 propos d'AidVault",
+  "subtitle": "Nous sommes en mission pour rendre les dons charitables accessibles, transparents et impactants pour tous. D\u00e9couvrez qui nous sommes et pourquoi nous faisons ce que nous faisons.",
+  "whoWeAre": "Qui nous sommes",
+  "platformBuilt": "Une plateforme con\u00e7ue pour l'\u00e9pargne intentionnelle",
+  "whoWeAreP1": "AidVault est plus qu'une plateforme d'\u00e9pargne - c'est un mouvement. Nous croyons que chacun a le pouvoir de faire une diff\u00e9rence, et que de petites actions constantes peuvent mener \u00e0 un changement transformateur.",
+  "whoWeAreP2": "En consacrant seulement 20% de votre \u00e9pargne \u00e0 l'\u00e9ducation des enfants, vous rejoignez des milliers d'autres personnes qui prouvent que la g\u00e9n\u00e9rosit\u00e9 et la croissance financi\u00e8re personnelle peuvent aller de pair.",
+  "ourStory": "Notre histoire",
+  "storyTitle": "Du parcours d'un enfant \u00e0 un mouvement mondial",
+  "storyP1": "Un matin dans le Rwanda rural, notre fondatrice a regard\u00e9 une fillette de 8 ans nomm\u00e9e Uwase entrer dans sa classe apr\u00e8s un trajet de 5 kilom\u00e8tres. Elle \u00e9tait impatiente d'apprendre, mais son bureau \u00e9tait vide. Pas de cahier. Pas de crayon. Seulement de la d\u00e9termination. Ce moment a r\u00e9v\u00e9l\u00e9 une v\u00e9rit\u00e9 puissante: le potentiel est partout, mais l'opportunit\u00e9 ne l'est pas.",
+  "storyP2": "De cette exp\u00e9rience, AidVault est n\u00e9 en 2025 avec une id\u00e9e simple mais audacieuse: et si construire votre avenir financier pouvait aussi construire l'\u00e9ducation d'un enfant? Et si \u00e9pargner de l'argent ne faisait pas que s\u00e9curiser demain, mais changeait une vie aujourd'hui? Notre mission est de transformer l'\u00e9pargne en impact.",
+  "storyP3": "AidVault connecte des personnes du monde entier avec des enfants dans le besoin, transformant les habitudes financi\u00e8res quotidiennes en acc\u00e8s \u00e0 l'\u00e9ducation, \u00e0 la dignit\u00e9 et \u00e0 l'espoir. Chaque contribution aide \u00e0 placer des outils d'apprentissage dans de jeunes mains et ouvre des portes vers un avenir meilleur. Ce qui a commenc\u00e9 comme l'histoire d'un enfant est devenu un mouvement mondial, car lorsque nous investissons ensemble, aucun enfant ne marche seul.",
+  "meetTeam": "Notre \u00e9quipe",
+  "teamSubtitle": "Rencontrez les personnes derri\u00e8re AidVault",
+  "teamDesc": "Une \u00e9quipe d\u00e9vou\u00e9e unie par une croyance partag\u00e9e dans le pouvoir de l'\u00e9ducation",
+  "ourValues": "Nos valeurs",
+  "whatWeStandFor": "Ce que nous d\u00e9fendons",
+  "valuesDesc": "Ces principes guident tout ce que nous faisons chez AidVault",
+  "valueTransparency": "Transparence",
+  "valueTransparencyDesc": "Chaque don est suivi et rapport\u00e9. Vous saurez toujours exactement o\u00f9 va votre contribution et l'impact qu'elle a.",
+  "valueEducationFirst": "L'\u00e9ducation d'abord",
+  "valueEducationFirstDesc": "Nous croyons que l'\u00e9ducation est l'outil le plus puissant pour briser les cycles de pauvret\u00e9 et cr\u00e9er un changement durable.",
+  "valueCommunity": "Communaut\u00e9",
+  "valueCommunityDesc": "Ensemble, nous sommes plus forts. Notre plateforme connecte des personnes partageant les m\u00eames id\u00e9es, engag\u00e9es \u00e0 faire la diff\u00e9rence.",
+  "valueTrust": "Confiance",
+  "valueTrustDesc": "Nous travaillons uniquement avec des partenaires \u00e9ducatifs v\u00e9rifi\u00e9s et assurons une transparence totale dans toutes nos op\u00e9rations.",
+  "valueImpact": "Impact mesurable",
+  "valueImpactDesc": "Chaque m\u00e9trique que nous suivons est li\u00e9e \u00e0 des r\u00e9sultats r\u00e9els pour de vrais enfants dans de vraies salles de classe.",
+  "joinCommunity": "Pr\u00eat \u00e0 rejoindre notre communaut\u00e9?",
+  "joinCommunityDesc": "Commencez votre parcours d'\u00e9pargne aujourd'hui et faites partie d'un mouvement qui change la vie des enfants.",
+  "createYourAccount": "Cr\u00e9ez votre compte",
+  "founded": "Fond\u00e9e",
+  "countries": "Pays",
+  "donors": "Donateurs",
+  "transparent": "Transparent",
+  "team": [
+    {
+      "name": "Mlle. Mwiza Daisy",
+      "role": "Fondatrice & Directrice G\u00e9n\u00e9rale",
+      "bio": "Une leader orient\u00e9e vers un objectif avec une vision claire d'utiliser l'innovation financi\u00e8re pour \u00e9largir l'acc\u00e8s \u00e0 l'\u00e9ducation. Mlle. Mwiza a fond\u00e9 AidVault pour relier l'\u00e9pargne mondiale \u00e0 l'impact local, dirigeant la strat\u00e9gie organisationnelle, les partenariats et la croissance \u00e0 long terme pour offrir des opportunit\u00e9s \u00e9ducatives durables aux enfants."
+    },
+    {
+      "name": "M. Sugira Digne",
+      "role": "Directeur Technique",
+      "bio": "Un ing\u00e9nieur logiciel senior et architecte syst\u00e8mes sp\u00e9cialis\u00e9 dans les plateformes financi\u00e8res s\u00e9curis\u00e9es et \u00e9volutives. M. Sugira supervise la strat\u00e9gie technologique d'AidVault, assurant l'int\u00e9grit\u00e9 du syst\u00e8me, la protection des donn\u00e9es et la performance tout en traduisant les objectifs d'impact social en solutions num\u00e9riques fiables."
+    },
+    {
+      "name": "M. Nshuti Daniel",
+      "role": "Directeur des Partenariats",
+      "bio": "Un leader strat\u00e9gique des partenariats responsable de la construction et de la gestion des relations avec les institutions financi\u00e8res, les ONG, les donateurs et les parties prenantes r\u00e9gionales. M. Nshuti stimule la collaboration et la mobilisation des ressources pour \u00e9tendre l'impact d'AidVault en Afrique de l'Est et au-del\u00e0."
+    },
+    {
+      "name": "M. Uwayezu Michael",
+      "role": "Directeur Communautaire",
+      "bio": "Un leader de l'engagement communautaire ax\u00e9 sur le renforcement des relations avec les \u00e9coles, les familles et les partenaires locaux. M. Uwayezu veille \u00e0 ce que les programmes soient dirig\u00e9s par la communaut\u00e9, efficaces et align\u00e9s sur les besoins r\u00e9els des enfants sur le terrain."
+    }
+  ]
+}

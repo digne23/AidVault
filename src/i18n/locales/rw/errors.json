@@ -1,0 +1,22 @@
+{
+  "pageNotFound": "Ipaji Ntiyabonetse",
+  "pageNotFoundDesc": "Ihangane! Ipaji ushaka ntibaho cyangwa yakimurwa. Ntuziganyire, reka tugufashe gusubira ku nzira.",
+  "youMightWantTo": "Ushobora gushaka:",
+  "checkUrl": "Kureba niba URL ari yo",
+  "goBackPrevious": "Gusubira ku ipaji ya mbere",
+  "visitHomepage": "Gusura ahabanza kugirango utangire bushya",
+  "goBack": "Subira Inyuma",
+  "backToHome": "Subira Ahabanza",
+  "popularPages": "Impaji zizwi:",
+  "somethingWentWrong": "Hari ikintu kitagenze neza",
+  "somethingWentWrongDesc": "Dusabye imbabazi, ariko hari ikintu kitateganijwe cyabaye. Nyamuneka gerageza ukundi cyangwa usubire ku ahabanza.",
+  "tryAgain": "Ongera Ugerageze",
+  "goHome": "Jya Ahabanza",
+  "problemPersists": "Niba iki kibazo gikomeje, nyamuneka",
+  "contactSupport": "vugana n'ubufasha",
+  "failedToLoad": "Gupakira byanze",
+  "errorBoundary": {
+    "title": "Hari ikintu kitagenze neza",
+    "description": "Dusabye imbabazi, ariko hari ikintu kitateganijwe cyabaye. Nyamuneka gerageza ukundi cyangwa usubire ku ahabanza."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "trustedBy": "Bizezwe na {{count}}+ abatanga ku isi hose",
+  "heroTitle1": "Bika. Tanga.",
+  "heroTitle2": "Hindura Ubuzima.",
+  "heroSubtitle": "Kubaka ubwizigame bwawe uzitabira gutanga 20% ku burezi bw'abana. Buri mezi 6, ubwizigame bwawe bufasha guhindura ejo hazaza h'umwana.",
+  "startSaving": "Tangira Kubika Uyu Munsi",
+  "learnHowItWorks": "Menya Uko Bikora",
+  "howItWorksTitle": "Uko AidVault Ikora",
+  "howItWorksSubtitle": "Inzira yoroshye igizwe n'intambwe eshatu ihindura ubwizigame bwawe igufashe",
+  "step": "Intambwe {{number}}",
+  "stepSaveTitle": "Bika",
+  "stepSaveDesc": "Kubaka ubwizigame bwawe mu mezi 6 ushyiramo amafaranga igihe icyo ari cyo cyose. Amafaranga yawe akura mugihe witegura gutanga.",
+  "stepGiveTitle": "Tanga",
+  "stepGiveDesc": "Nyuma y'amezi 6, utanga 20% y'ubwizigame bwawe ku burezi bw'abana. Ugumana 80% uzanye itandukaniro ryiza.",
+  "stepImpactTitle": "Ingaruka",
+  "stepImpactDesc": "Reba umusanzu wawe uhindura ubuzima. Buri mutango utanga ibikoresho by'amashuri n'ibikoresho by'uburezi ku bana bakeneye.",
+  "learnMoreProcess": "Menya byinshi ku nzira yacu",
+  "collectiveImpact": "Ingaruka Zacu Zose Hamwe",
+  "collectiveImpactSubtitle": "Hamwe, umuryango wacu urimo gukora itandukaniro rikomeye mu buzima bw'abana",
+  "totalDonated": "Igiteranyo Cyatanzwe",
+  "activeDonors": "Abatanga Bakora",
+  "childrenHelped": "Abana Bafashijwe",
+  "missionTitle": "Intego Yacu",
+  "missionSubtitle": "Gutuma Uburezi Bugerwaho na Buri Mwana",
+  "missionDesc": "AidVault yashinzwe ku kwizera kuroshye: ko buri wese ashobora gukora itandukaniro iyo ahawe ibikoresho bikwiye. Twaremye urubuga rutuma gutanga bifasha, byoroshye kandi bitera imbere.",
+  "readFullMission": "Soma Intego Yose",
+  "testimonialTitle": "Icyo Abatanga Bacu Bavuga",
+  "testimonialSubtitle": "Ifatanye n'ibihumbi by'abantu barimo gukora itandukaniro",
+  "readyToMakeDifference": "Witeguye Gukora Itandukaniro?",
+  "joinCommunity": "Ifatanye n'umuryango wacu w'ababika batanga kandi utangire urugendo rwawe mu ngaruka z'ingenzi. Bifata iminota mike gusa gushyiraho ubwizigame bwawe.",
+  "createFreeAccount": "Fungura Konti Yawe Ku Buntu",
+  "viewPublicDashboard": "Reba Ikibaho Rusange",
+  "noCreditCard": "Nta karita y'inguzanyo isabwa. Tangira n'umubare uwo ari wo wose.",
+  "testimonials": [
+    {
+      "name": "Ishimwe Melissa",
+      "role": "Umutanga Ukora kuva 2025",
+      "quote": "AidVault yahinduriye uburyo nkurikiza kubika. Kumenya ko igice cy'ubwizigame bwanjye gishyigikira uburezi bw'abana bitanga intego nyayo kuri buri musanzu."
+    },
+    {
+      "name": "Nkurunziza Kevin",
+      "role": "Umuyobozi w'Umuryango",
+      "quote": "Ikitandukanya AidVault ni ukugaragara kwayo. Urubuga rugaragaza neza uburyo amafaranga akoreshwa n'ingaruka atanga, bituma haba icyizere ku ntego."
+    },
+    {
+      "name": "Mukamana Bella",
+      "role": "Umutanga wa Buri Kwezi",
+      "quote": "AidVault intuma guteganya ejo hazaza hanjye nk'uko ntanga ku burezi bw'undi muntu. Uburinganire bashyizeho butuma kubika ari ikintu gifatika kandi gifite icyo kivuze."
+    }
+  ]
+}

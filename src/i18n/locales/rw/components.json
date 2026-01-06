@@ -1,0 +1,59 @@
+{
+  "addFundsModal": {
+    "title": "Ongeramo Amafaranga",
+    "currentBalance": "Ubwizigame bw'ubu:",
+    "amount": "Igiteranyo",
+    "quickSelect": "Guhitamo Vuba",
+    "donationInfo": "20% y'ubwizigame bwawe izatangwa ku burezi bw'abana nyuma y'amezi 6. 80% isigaye ni ayawe.",
+    "processing": "Gutunganya...",
+    "addAmount": "Ongeraho {{amount}} RWF",
+    "invalidAmount": "Nyamuneka andika igiteranyo kiboneye",
+    "failedToAdd": "Kongeramo Amafaranga Byanze",
+    "fundsAdded": "Amafaranga Yongewe!",
+    "fundsAddedDesc": "{{amount}} RWF yongewe mu bwizigame bwawe"
+  },
+  "impactCalculator": {
+    "childFullYear": "umwaka wuzuye w'uburezi bw'umwana",
+    "childrenTuition6Months": "amasomo y'abana y'amezi 6",
+    "childTuition6Months": "amasomo y'umwana y'amezi 6",
+    "childrenTuition3Months": "amasomo y'abana y'amezi 3",
+    "childTuition3Months": "amasomo y'umwana y'amezi 3",
+    "childrenTuition1Month": "amasomo y'abana y'ukwezi 1",
+    "childTuition1Month": "amasomo y'umwana y'ukwezi 1",
+    "monthsOfSchoolSupplies": "amezi y'ibikoresho by'ishuri",
+    "monthOfSchoolSupplies": "ukwezi kw'ibikoresho by'ishuri",
+    "weeksOfSchoolMeals": "ibyumweru by'ibiryo by'ishuri",
+    "weekOfSchoolMeals": "icyumweru cy'ibiryo by'ishuri",
+    "notebookAndPencilSets": "imiseto y'ibitabo n'amakaramu",
+    "notebookAndPencilSet": "umusheto w'igitabo n'amakaramu",
+    "notebooksAndPencils": "ibitabo n'amakaramu",
+    "notebookAndPencils": "igitabo n'amakaramu",
+    "everyDollarHelps": "Buri dola igira akamaro!",
+    "enterAmountToSee": "Andika igiteranyo kugirango urebe ingaruka zawe zishoboka",
+    "yourDonationOf": "Impano yawe ya",
+    "canProvide": "Ishobora gutanga:",
+    "everyContribution": "Buri musanzu, nubwo ari muto, ufasha gutuma uburezi bugerwa na bose.",
+    "impactEstimates": "Ingaruka zateganijwe zishingiye ku giciro gisanzwe mu karere k'abaparineri bacu",
+    "moreImpacts": "+{{count}} ibindi"
+  },
+  "emptyState": {
+    "noTransactionsTitle": "Nta Bikorwa na Bimwe",
+    "noTransactionsDesc": "Tangira kubaka ubwizigame bwawe wongeramo amafaranga yawe ya mbere. Buri ntambwe igira akamaro mu gukora itandukaniro!",
+    "addFirstFunds": "Ongeramo Amafaranga Yawe ya Mbere",
+    "noDonationsTitle": "Nta Mpano na Imwe",
+    "noDonationsDesc": "Rangiza igihe cyo kubika kugirango ufungure impano kandi utangire gukora ingaruka nyayo ku burezi bw'abana.",
+    "viewYourVault": "Reba Ubwizigame Bwawe",
+    "noResultsTitle": "Nta Bisubizo Byabonetse",
+    "noResultsDesc": "Ntabwo twashoboye kubona ikintu gihura n'ubushakashatsi bwawe. Gerageza guhindura amahitamo cyangwa amagambo yo gushaka.",
+    "clearFilters": "Siba Amahitamo",
+    "noDataTitle": "Nta Makuru Ahari",
+    "noDataDesc": "Nta makuru yo kwerekana. Garuka nyuma!"
+  },
+  "spinner": {
+    "loading": "Gutegereza"
+  },
+  "toast": {
+    "dismiss": "Hagarika",
+    "notifications": "Imenyesha"
+  }
+}

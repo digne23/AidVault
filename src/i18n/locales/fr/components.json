@@ -1,0 +1,59 @@
+{
+  "addFundsModal": {
+    "title": "Ajouter des fonds",
+    "currentBalance": "Solde actuel:",
+    "amount": "Montant",
+    "quickSelect": "Sélection rapide",
+    "donationInfo": "20% de votre épargne sera donné à l'éducation des enfants après 6 mois. Les 80% restants vous appartiennent.",
+    "processing": "Traitement...",
+    "addAmount": "Ajouter {{amount}} RWF",
+    "invalidAmount": "Veuillez entrer un montant valide",
+    "failedToAdd": "Échec de l'ajout de fonds",
+    "fundsAdded": "Fonds ajoutés!",
+    "fundsAddedDesc": "{{amount}} RWF ont été ajoutés à votre coffre"
+  },
+  "impactCalculator": {
+    "childFullYear": "année complète d'éducation d'un enfant",
+    "childrenTuition6Months": "scolarité de {{count}} enfants pendant 6 mois",
+    "childTuition6Months": "scolarité d'un enfant pendant 6 mois",
+    "childrenTuition3Months": "scolarité de {{count}} enfants pendant 3 mois",
+    "childTuition3Months": "scolarité d'un enfant pendant 3 mois",
+    "childrenTuition1Month": "scolarité de {{count}} enfants pendant 1 mois",
+    "childTuition1Month": "scolarité d'un enfant pendant 1 mois",
+    "monthsOfSchoolSupplies": "mois de fournitures scolaires",
+    "monthOfSchoolSupplies": "mois de fournitures scolaires",
+    "weeksOfSchoolMeals": "semaines de repas scolaires",
+    "weekOfSchoolMeals": "semaine de repas scolaires",
+    "notebookAndPencilSets": "ensembles cahier et crayons",
+    "notebookAndPencilSet": "ensemble cahier et crayons",
+    "notebooksAndPencils": "cahiers et crayons",
+    "notebookAndPencils": "cahier et crayons",
+    "everyDollarHelps": "Chaque franc compte!",
+    "enterAmountToSee": "Entrez un montant pour voir votre impact potentiel",
+    "yourDonationOf": "Votre don de",
+    "canProvide": "Peut fournir:",
+    "everyContribution": "Chaque contribution, aussi petite soit-elle, aide à rendre l'éducation accessible.",
+    "impactEstimates": "Estimations d'impact basées sur les coûts moyens dans nos régions partenaires",
+    "moreImpacts": "+{{count}} de plus"
+  },
+  "emptyState": {
+    "noTransactionsTitle": "Pas encore de transactions",
+    "noTransactionsDesc": "Commencez à construire votre coffre en ajoutant vos premiers fonds. Chaque étape compte pour faire la différence!",
+    "addFirstFunds": "Ajoutez vos premiers fonds",
+    "noDonationsTitle": "Pas encore de dons",
+    "noDonationsDesc": "Complétez votre période d'épargne pour débloquer les dons et commencer à avoir un vrai impact sur l'éducation des enfants.",
+    "viewYourVault": "Voir votre coffre",
+    "noResultsTitle": "Aucun résultat trouvé",
+    "noResultsDesc": "Nous n'avons rien trouvé correspondant à votre recherche. Essayez d'ajuster vos filtres ou termes de recherche.",
+    "clearFilters": "Effacer les filtres",
+    "noDataTitle": "Aucune donnée disponible",
+    "noDataDesc": "Il n'y a pas encore de données à afficher. Revenez plus tard!"
+  },
+  "spinner": {
+    "loading": "Chargement"
+  },
+  "toast": {
+    "dismiss": "Fermer",
+    "notifications": "Notifications"
+  }
+}

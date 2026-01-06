@@ -1,0 +1,78 @@
+{
+  "title": "Comment AidVault fonctionne",
+  "subtitle": "Un processus simple et transparent qui transforme votre \u00e9pargne en impact r\u00e9el. Voici tout ce que vous devez savoir sur l'\u00e9pargne intentionnelle.",
+  "processTitle": "Le processus",
+  "processSubtitle": "Cinq \u00e9tapes simples pour faire la diff\u00e9rence",
+  "processDesc": "De l'inscription \u00e0 l'impact - voici votre parcours avec AidVault",
+  "steps": [
+    {
+      "title": "Cr\u00e9ez votre compte",
+      "description": "Inscrivez-vous en quelques minutes avec juste votre e-mail. Pas de v\u00e9rification de cr\u00e9dit, pas de frais cach\u00e9s. Votre parcours vers l'\u00e9pargne intentionnelle commence ici."
+    },
+    {
+      "title": "Ajoutez des fonds \u00e0 votre coffre",
+      "description": "D\u00e9posez de l'argent quand vous voulez. Il n'y a pas de minimum - commencez avec ce qui vous convient et construisez \u00e0 partir de l\u00e0."
+    },
+    {
+      "title": "Regardez votre \u00e9pargne cro\u00eetre",
+      "description": "Suivez votre progression sur votre tableau de bord personnel. Regardez votre solde augmenter et voyez votre impact potentiel cro\u00eetre en temps r\u00e9el."
+    },
+    {
+      "title": "Faites don de 20% \u00e0 l'\u00e9ducation",
+      "description": "Apr\u00e8s 6 mois, vous devenez \u00e9ligible pour faire un don. 20% de votre \u00e9pargne va directement \u00e0 fournir des fournitures scolaires et du mat\u00e9riel \u00e9ducatif."
+    },
+    {
+      "title": "Voyez votre impact & recommencez",
+      "description": "Recevez des mises \u00e0 jour sur la fa\u00e7on dont votre don a aid\u00e9. Ensuite, commencez un nouveau cycle d'\u00e9pargne et continuez \u00e0 faire la diff\u00e9rence."
+    }
+  ],
+  "journeyTitle": "Votre parcours d'\u00e9pargne",
+  "journeySubtitle": "Regardez votre impact cro\u00eetre au fil du temps",
+  "journeyDesc": "Chaque fois que vous ajoutez des fonds \u00e0 votre coffre, vous n'\u00e9pargnez pas seulement pour vous - vous investissez dans l'avenir d'un enfant. Voici \u00e0 quoi ressemble votre parcours:",
+  "journeyFeatures": [
+    "Suivi du solde en temps r\u00e9el",
+    "Progression visuelle vers votre objectif de don",
+    "Historique complet des transactions",
+    "Compte \u00e0 rebours vers l'\u00e9ligibilit\u00e9 au don"
+  ],
+  "yourVaultBalance": "Votre solde de coffre",
+  "progressToDonation": "Progression vers le don",
+  "daysUntilEligible": "{{days}} jours avant d'\u00eatre \u00e9ligible pour faire un don",
+  "projectedDonation": "Don projet\u00e9 (20%)",
+  "projectedImpact": "Suffisant pour les fournitures scolaires de {{count}} enfants",
+  "recentActivity": "Activit\u00e9 r\u00e9cente",
+  "deposit": "D\u00e9p\u00f4t",
+  "faqTitle": "FAQ",
+  "faqSubtitle": "Questions fr\u00e9quemment pos\u00e9es",
+  "faqDesc": "Tout ce que vous devez savoir sur l'\u00e9pargne et les dons avec AidVault",
+  "faqs": [
+    {
+      "question": "Pourquoi 6 mois?",
+      "answer": "La p\u00e9riode de 6 mois vous aide \u00e0 construire une habitude d'\u00e9pargne significative tout en accumulant suffisamment pour faire un impact r\u00e9el. Cela nous permet \u00e9galement de regrouper les dons pour une efficacit\u00e9 maximale, r\u00e9duisant les co\u00fbts administratifs et garantissant que plus de votre contribution atteint les enfants dans le besoin."
+    },
+    {
+      "question": "Pourquoi 20%?",
+      "answer": "L'engagement de 20% est con\u00e7u pour \u00eatre impactant mais durable. Il vous permet d'\u00e9pargner pour vos propres objectifs tout en faisant une contribution significative \u00e0 l'\u00e9ducation. Beaucoup de nos utilisateurs trouvent cet \u00e9quilibre motivant - vous construisez votre avenir tout en investissant dans celui de quelqu'un d'autre."
+    },
+    {
+      "question": "O\u00f9 va mon don?",
+      "answer": "100% de votre don va aux fournitures et mat\u00e9riels \u00e9ducatifs pour les enfants dans le besoin. Nous travaillons avec des \u00e9coles partenaires et des organisations v\u00e9rifi\u00e9es dans plus de 15 pays. Chaque don est suivi, et vous recevrez des mises \u00e0 jour sur l'impact sp\u00e9cifique de votre contribution."
+    },
+    {
+      "question": "Puis-je donner plus de 20%?",
+      "answer": "Absolument! Quand vous atteignez votre jalon de 6 mois, vous pouvez choisir de donner de 20% jusqu'\u00e0 100% de votre \u00e9pargne. Beaucoup d'utilisateurs choisissent de donner plus quand ils le peuvent, et chaque montant suppl\u00e9mentaire fait une plus grande diff\u00e9rence."
+    },
+    {
+      "question": "Puis-je retirer mon \u00e9pargne?",
+      "answer": "Oui, votre argent est toujours le v\u00f4tre. Cependant, nous vous encourageons \u00e0 compl\u00e9ter le cycle de 6 mois pour maximiser votre impact. Si vous devez retirer plus t\u00f4t, vous pouvez le faire \u00e0 tout moment, bien que l'engagement de 20% s'appliquerait aux futurs cycles d'\u00e9pargne."
+    },
+    {
+      "question": "Mon argent est-il en s\u00e9curit\u00e9?",
+      "answer": "Vos fonds sont s\u00e9curis\u00e9s avec un cryptage de niveau bancaire et d\u00e9tenus dans des comptes financiers r\u00e9glement\u00e9s. Nous utilisons des mesures de s\u00e9curit\u00e9 standard de l'industrie, y compris le cryptage SSL 256 bits et l'authentification \u00e0 deux facteurs pour prot\u00e9ger votre compte et vos fonds."
+    }
+  ],
+  "startJourney": "Pr\u00eat \u00e0 commencer votre parcours?",
+  "startJourneyDesc": "Rejoignez des milliers d'\u00e9pargnants qui font une diff\u00e9rence dans la vie des enfants tout en construisant leur propre avenir financier.",
+  "createFreeAccount": "Cr\u00e9ez votre compte gratuit",
+  "learnAboutUs": "En savoir plus sur nous"
+}
