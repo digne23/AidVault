@@ -34,47 +34,67 @@ export default function AdminTransactions() {
     async function fetchTransactions() {
       setLoading(true)
       try {
-        // For demo, show demo_donations as donation transactions
-        // Filter: only 'all' or 'donation' will show data
-        if (filter !== 'all' && filter !== 'donation') {
-          setTotalTransactions(0)
-          setTransactions([])
-          setLoading(false)
-          return
-        }
+        // Fetch real transactions
+        const { data: realTransactions } = await supabase
+          .from('transactions')
+          .select('*')
+          .order('created_at', { ascending: false })
 
-        const { count } = await supabase
-          .from('demo_donations')
-          .select('*', { count: 'exact', head: true })
-
-        setTotalTransactions(count || 0)
-
-        // Fetch with pagination
-        const from = (currentPage - 1) * transactionsPerPage
-        const to = from + transactionsPerPage - 1
-
-        const { data: demoData } = await supabase
+        // Fetch demo donations
+        const { data: demoDonations } = await supabase
           .from('demo_donations')
           .select('*')
           .order('created_at', { ascending: false })
-          .range(from, to)
 
-        if (demoData) {
-          // Map demo_donations to transaction format
-          const transactionsWithUsers = demoData.map((d) => ({
-            id: d.id,
-            user_id: d.id,
-            type: 'donation' as const,
-            amount: d.amount,
-            created_at: d.created_at,
-            user: {
-              full_name: d.donor_name || 'Anonymous',
-              email: d.impact_description || '',
-            },
-          }))
-
-          setTransactions(transactionsWithUsers)
+        // Fetch user profiles for real transactions
+        let usersData: { id: string; email: string; full_name: string }[] = []
+        if (realTransactions && realTransactions.length > 0) {
+          const userIds = [...new Set(realTransactions.map((t) => t.user_id))]
+          const { data } = await supabase
+            .from('profiles')
+            .select('id, email, full_name')
+            .in('id', userIds)
+          usersData = data || []
         }
+
+        // Map real transactions
+        const mappedRealTx = (realTransactions || []).map((tx) => ({
+          id: tx.id,
+          user_id: tx.user_id,
+          type: tx.type as 'deposit' | 'withdrawal' | 'donation',
+          amount: tx.amount,
+          created_at: tx.created_at,
+          user: usersData.find((u) => u.id === tx.user_id),
+        }))
+
+        // Map demo donations as donation transactions
+        const mappedDemoTx = (demoDonations || []).map((d) => ({
+          id: d.id,
+          user_id: d.id,
+          type: 'donation' as const,
+          amount: d.amount,
+          created_at: d.created_at,
+          user: {
+            full_name: d.donor_name || 'Anonymous',
+            email: d.impact_description || '',
+          },
+        }))
+
+        // Combine and sort by date
+        let allTransactions = [...mappedRealTx, ...mappedDemoTx]
+        allTransactions.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
+
+        // Apply filter
+        if (filter !== 'all') {
+          allTransactions = allTransactions.filter((tx) => tx.type === filter)
+        }
+
+        setTotalTransactions(allTransactions.length)
+
+        // Apply pagination
+        const from = (currentPage - 1) * transactionsPerPage
+        const to = from + transactionsPerPage
+        setTransactions(allTransactions.slice(from, to))
       } catch (error) {
         console.error('Error fetching transactions:', error)
       } finally {
