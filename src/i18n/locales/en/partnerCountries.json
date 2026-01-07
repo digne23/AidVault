@@ -1,0 +1,40 @@
+{
+  "title": "Our Global Reach",
+  "subtitle": "Our network spans {{count}} countries across multiple continents, uniting diverse expertise to transform education in Rwanda.",
+  "stats": {
+    "eac": "East African Community",
+    "otherAfrican": "Other African Nations",
+    "international": "International Partners"
+  },
+  "sections": {
+    "eac": "East African Community",
+    "otherAfrican": "Other African Nations",
+    "international": "International Partners"
+  },
+  "headquarters": {
+    "title": "Headquartered in Rwanda",
+    "description": "Our main office is located at Kigali Alliance Business Center, Kigali, Rwanda - the heart of Africa's fastest-growing tech ecosystem. From here, we coordinate our global partnerships to deliver maximum impact for children's education.",
+    "viewPartners": "View All Partners",
+    "aboutUs": "About AidVault"
+  },
+  "countries": {
+    "rw": "Rwanda",
+    "ke": "Kenya",
+    "ug": "Uganda",
+    "tz": "Tanzania",
+    "bi": "Burundi",
+    "cd": "DR Congo",
+    "za": "South Africa",
+    "ng": "Nigeria",
+    "gh": "Ghana",
+    "et": "Ethiopia",
+    "us": "United States",
+    "gb": "United Kingdom",
+    "de": "Germany",
+    "fr": "France",
+    "ca": "Canada",
+    "jp": "Japan",
+    "cn": "China",
+    "in": "India"
+  }
+}

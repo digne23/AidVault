@@ -1,0 +1,40 @@
+{
+  "title": "Kugera Kwacu ku Isi",
+  "subtitle": "Urusobe rwacu rugera mu bihugu {{count}} ku migabane myinshi, ruhuza ubuhanga butandukanye kugira ngo duhindure uburezi mu Rwanda.",
+  "stats": {
+    "eac": "Umuryango w'Iburasirazuba bw'Afurika",
+    "otherAfrican": "Ibindi Bihugu bya Afurika",
+    "international": "Abafatanyabikorwa Mpuzamahanga"
+  },
+  "sections": {
+    "eac": "Umuryango w'Iburasirazuba bw'Afurika",
+    "otherAfrican": "Ibindi Bihugu bya Afurika",
+    "international": "Abafatanyabikorwa Mpuzamahanga"
+  },
+  "headquarters": {
+    "title": "Icyicaro Gikuru mu Rwanda",
+    "description": "Ibiro byacu bikuru biherereye muri Kigali Alliance Business Center, Kigali, Rwanda - umutima w'ikoranabuhanga rikura cyane muri Afurika. Aho niho duhuza ubufatanye bwacu bw'isi yose kugira ngo dutange ingaruka nziza ku burezi bw'abana.",
+    "viewPartners": "Reba Abafatanyabikorwa Bose",
+    "aboutUs": "Ibyerekeye AidVault"
+  },
+  "countries": {
+    "rw": "Rwanda",
+    "ke": "Kenya",
+    "ug": "Uganda",
+    "tz": "Tanzaniya",
+    "bi": "Uburundi",
+    "cd": "Kongo",
+    "za": "Afurika y'Epfo",
+    "ng": "Nijeriya",
+    "gh": "Gana",
+    "et": "Etiyopiya",
+    "us": "Leta Zunze Ubumwe",
+    "gb": "Ubwongereza",
+    "de": "Ubudage",
+    "fr": "Ubufaransa",
+    "ca": "Kanada",
+    "jp": "Ubuyapani",
+    "cn": "Ubushinwa",
+    "in": "Ubuhinde"
+  }
+}

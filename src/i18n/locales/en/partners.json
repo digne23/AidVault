@@ -1,0 +1,21 @@
+{
+  "title": "Our Partners",
+  "subtitle": "Together with our valued partners from Rwanda and around the world, we're building a stronger foundation for education and community development.",
+  "stats": {
+    "activePartners": "Active Partners",
+    "sectorsCovered": "Sectors Covered",
+    "partnerCountries": "Partner Countries",
+    "yearsCollaboration": "Years of Collaboration"
+  },
+  "globalReach": {
+    "title": "Global Reach",
+    "description": "Our partnerships span across 18 countries, bringing together diverse expertise and resources to support education in Rwanda and beyond.",
+    "viewCountries": "View Partner Countries"
+  },
+  "becomePartner": {
+    "title": "Become a Partner",
+    "description": "Join our mission to transform education funding in Rwanda. Whether you're a financial institution, technology company, NGO, or government agency, there's a place for you in our growing network.",
+    "contactUs": "Contact Us",
+    "learnMore": "Learn More About Us"
+  }
+}

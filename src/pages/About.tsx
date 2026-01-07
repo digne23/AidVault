@@ -117,7 +117,7 @@ export default function About() {
                     <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{t('founded')}</p>
                   </div>
                   <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm text-center">
-                    <p className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">15+</p>
+                    <p className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">18</p>
                     <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{t('countries')}</p>
                   </div>
                   <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm text-center">

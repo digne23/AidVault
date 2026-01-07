@@ -19,6 +19,8 @@ import enSettings from './locales/en/settings.json'
 import enComponents from './locales/en/components.json'
 import enFooter from './locales/en/footer.json'
 import enErrors from './locales/en/errors.json'
+import enPartners from './locales/en/partners.json'
+import enPartnerCountries from './locales/en/partnerCountries.json'
 
 // Kinyarwanda translations
 import rwCommon from './locales/rw/common.json'
@@ -37,6 +39,8 @@ import rwSettings from './locales/rw/settings.json'
 import rwComponents from './locales/rw/components.json'
 import rwFooter from './locales/rw/footer.json'
 import rwErrors from './locales/rw/errors.json'
+import rwPartners from './locales/rw/partners.json'
+import rwPartnerCountries from './locales/rw/partnerCountries.json'
 
 // French translations
 import frCommon from './locales/fr/common.json'
@@ -55,6 +59,8 @@ import frSettings from './locales/fr/settings.json'
 import frComponents from './locales/fr/components.json'
 import frFooter from './locales/fr/footer.json'
 import frErrors from './locales/fr/errors.json'
+import frPartners from './locales/fr/partners.json'
+import frPartnerCountries from './locales/fr/partnerCountries.json'
 
 const resources = {
   en: {
@@ -74,6 +80,8 @@ const resources = {
     components: enComponents,
     footer: enFooter,
     errors: enErrors,
+    partners: enPartners,
+    partnerCountries: enPartnerCountries,
   },
   rw: {
     common: rwCommon,
@@ -92,6 +100,8 @@ const resources = {
     components: rwComponents,
     footer: rwFooter,
     errors: rwErrors,
+    partners: rwPartners,
+    partnerCountries: rwPartnerCountries,
   },
   fr: {
     common: frCommon,
@@ -110,6 +120,8 @@ const resources = {
     components: frComponents,
     footer: frFooter,
     errors: frErrors,
+    partners: frPartners,
+    partnerCountries: frPartnerCountries,
   },
 }
 
@@ -154,6 +166,8 @@ i18n
       'components',
       'footer',
       'errors',
+      'partners',
+      'partnerCountries',
     ],
     interpolation: {
       escapeValue: false, // React already escapes

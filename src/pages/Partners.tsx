@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 interface PartnerWithLogo {
   name: string
@@ -207,17 +208,18 @@ const partnerCategories = [
 const allPartners = [...financialPartners, ...techPartners, ...ngoPartners, ...govPartners]
 
 export default function Partners() {
+  const { t } = useTranslation('partners')
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            Our Partners
+            {t('title')}
           </h1>
           <p className="text-lg sm:text-xl text-emerald-100 max-w-3xl mx-auto">
-            Together with our valued partners from Rwanda and around the world,
-            we're building a stronger foundation for education and community development.
+            {t('subtitle')}
           </p>
         </div>
       </section>
@@ -228,21 +230,21 @@ export default function Partners() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
               <p className="text-3xl sm:text-4xl font-bold text-emerald-600 dark:text-emerald-400">{allPartners.length}+</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Active Partners</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{t('stats.activePartners')}</p>
             </div>
             <div>
               <p className="text-3xl sm:text-4xl font-bold text-emerald-600 dark:text-emerald-400">4</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Sectors Covered</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{t('stats.sectorsCovered')}</p>
             </div>
             <div>
               <Link to="/partner-countries" className="block hover:opacity-80 transition-opacity">
-                <p className="text-3xl sm:text-4xl font-bold text-emerald-600 dark:text-emerald-400">15+</p>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Partner Countries</p>
+                <p className="text-3xl sm:text-4xl font-bold text-emerald-600 dark:text-emerald-400">18</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{t('stats.partnerCountries')}</p>
               </Link>
             </div>
             <div>
               <p className="text-3xl sm:text-4xl font-bold text-emerald-600 dark:text-emerald-400">5</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Years of Collaboration</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{t('stats.yearsCollaboration')}</p>
             </div>
           </div>
         </div>
@@ -276,11 +278,10 @@ export default function Partners() {
       <section className="py-12 sm:py-16 bg-white dark:bg-gray-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Global Reach
+            {t('globalReach.title')}
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-            Our partnerships span across 15+ countries, bringing together diverse expertise
-            and resources to support education in Rwanda and beyond.
+            {t('globalReach.description')}
           </p>
           <Link
             to="/partner-countries"
@@ -289,7 +290,7 @@ export default function Partners() {
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            View Partner Countries
+            {t('globalReach.viewCountries')}
           </Link>
         </div>
       </section>
@@ -298,12 +299,10 @@ export default function Partners() {
       <section className="py-12 sm:py-16 bg-gradient-to-br from-emerald-600 to-teal-700 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-            Become a Partner
+            {t('becomePartner.title')}
           </h2>
           <p className="text-emerald-100 mb-8 max-w-2xl mx-auto">
-            Join our mission to transform education funding in Rwanda. Whether you're
-            a financial institution, technology company, NGO, or government agency,
-            there's a place for you in our growing network.
+            {t('becomePartner.description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -313,13 +312,13 @@ export default function Partners() {
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              Contact Us
+              {t('becomePartner.contactUs')}
             </a>
             <Link
               to="/about"
               className="inline-flex items-center justify-center px-6 py-3 bg-emerald-500/20 text-white font-medium rounded-lg border border-white/30 hover:bg-emerald-500/30 transition-colors"
             >
-              Learn More About Us
+              {t('becomePartner.learnMore')}
             </Link>
           </div>
         </div>

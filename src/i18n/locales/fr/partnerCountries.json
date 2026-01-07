@@ -1,0 +1,40 @@
+{
+  "title": "Notre Portée Mondiale",
+  "subtitle": "Notre réseau s'étend sur {{count}} pays à travers plusieurs continents, unissant une expertise diversifiée pour transformer l'éducation au Rwanda.",
+  "stats": {
+    "eac": "Communauté Est-Africaine",
+    "otherAfrican": "Autres Nations Africaines",
+    "international": "Partenaires Internationaux"
+  },
+  "sections": {
+    "eac": "Communauté Est-Africaine",
+    "otherAfrican": "Autres Nations Africaines",
+    "international": "Partenaires Internationaux"
+  },
+  "headquarters": {
+    "title": "Siège au Rwanda",
+    "description": "Notre bureau principal est situé au Kigali Alliance Business Center, Kigali, Rwanda - le cœur de l'écosystème technologique le plus dynamique d'Afrique. De là, nous coordonnons nos partenariats mondiaux pour un impact maximal sur l'éducation des enfants.",
+    "viewPartners": "Voir Tous les Partenaires",
+    "aboutUs": "À Propos d'AidVault"
+  },
+  "countries": {
+    "rw": "Rwanda",
+    "ke": "Kenya",
+    "ug": "Ouganda",
+    "tz": "Tanzanie",
+    "bi": "Burundi",
+    "cd": "RD Congo",
+    "za": "Afrique du Sud",
+    "ng": "Nigeria",
+    "gh": "Ghana",
+    "et": "Éthiopie",
+    "us": "États-Unis",
+    "gb": "Royaume-Uni",
+    "de": "Allemagne",
+    "fr": "France",
+    "ca": "Canada",
+    "jp": "Japon",
+    "cn": "Chine",
+    "in": "Inde"
+  }
+}
