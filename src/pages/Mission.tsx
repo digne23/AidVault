@@ -250,7 +250,7 @@ export default function Mission() {
                   <div key={index}>
                     <div className="flex justify-between items-center mb-2">
                       <span className="font-medium">{item.label}</span>
-                      <span className="text-gray-400">{item.percentage}%</span>
+                      <span className="text-gray-300">{item.percentage}%</span>
                     </div>
                     <div className="h-3 bg-gray-700 rounded-full overflow-hidden">
                       <div
@@ -326,7 +326,7 @@ export default function Mission() {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
                     <p className="text-4xl font-bold">95%</p>
-                    <p className="text-gray-400 text-sm">{t('goesToPrograms')}</p>
+                    <p className="text-gray-300 text-sm">{t('goesToPrograms')}</p>
                   </div>
                 </div>
               </div>
@@ -336,7 +336,7 @@ export default function Mission() {
                 {fundAllocation.map((item, index) => (
                   <div key={index} className="flex items-center">
                     <div className={`w-3 h-3 ${item.color} rounded-full mr-2`} />
-                    <span className="text-sm text-gray-400">{item.label}</span>
+                    <span className="text-sm text-gray-300">{item.label}</span>
                   </div>
                 ))}
               </div>

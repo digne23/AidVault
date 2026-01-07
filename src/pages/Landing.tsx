@@ -227,7 +227,7 @@ export default function Landing() {
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               {t('collectiveImpact')}
             </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               {t('collectiveImpactSubtitle')}
             </p>
           </div>
@@ -242,7 +242,7 @@ export default function Landing() {
               <p className="text-4xl sm:text-5xl font-bold text-emerald-400 mb-2">
                 <AnimatedCounter end={165750000} suffix=" RWF" />
               </p>
-              <p className="text-gray-400">{t('totalDonated')}</p>
+              <p className="text-gray-300">{t('totalDonated')}</p>
             </div>
 
             <div className="text-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
@@ -254,7 +254,7 @@ export default function Landing() {
               <p className="text-4xl sm:text-5xl font-bold text-blue-400 mb-2">
                 <AnimatedCounter end={2547} suffix="+" />
               </p>
-              <p className="text-gray-400">{t('activeDonors')}</p>
+              <p className="text-gray-300">{t('activeDonors')}</p>
             </div>
 
             <div className="text-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
@@ -266,7 +266,7 @@ export default function Landing() {
               <p className="text-4xl sm:text-5xl font-bold text-amber-400 mb-2">
                 <AnimatedCounter end={2783} />
               </p>
-              <p className="text-gray-400">{t('childrenHelped')}</p>
+              <p className="text-gray-300">{t('childrenHelped')}</p>
             </div>
           </div>
         </div>

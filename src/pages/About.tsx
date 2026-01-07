@@ -219,8 +219,8 @@ export default function About() {
                 <div className="w-14 h-14 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-xl flex items-center justify-center mb-6 text-white">
                   {value.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-3">{value.title}</h3>
-                <p className="text-gray-400">{value.description}</p>
+                <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
+                <p className="text-gray-300">{value.description}</p>
               </div>
             ))}
           </div>
