@@ -34,44 +34,43 @@ export default function AdminTransactions() {
     async function fetchTransactions() {
       setLoading(true)
       try {
-        // Build query for real transactions
-        let countQuery = supabase.from('transactions').select('*', { count: 'exact', head: true })
-
-        if (filter !== 'all') {
-          countQuery = countQuery.eq('type', filter)
+        // For demo, show demo_donations as donation transactions
+        // Filter: only 'all' or 'donation' will show data
+        if (filter !== 'all' && filter !== 'donation') {
+          setTotalTransactions(0)
+          setTransactions([])
+          setLoading(false)
+          return
         }
 
-        const { count } = await countQuery
+        const { count } = await supabase
+          .from('demo_donations')
+          .select('*', { count: 'exact', head: true })
+
         setTotalTransactions(count || 0)
 
-        // Fetch transactions with pagination
+        // Fetch with pagination
         const from = (currentPage - 1) * transactionsPerPage
         const to = from + transactionsPerPage - 1
 
-        let dataQuery = supabase
-          .from('transactions')
+        const { data: demoData } = await supabase
+          .from('demo_donations')
           .select('*')
           .order('created_at', { ascending: false })
           .range(from, to)
 
-        if (filter !== 'all') {
-          dataQuery = dataQuery.eq('type', filter)
-        }
-
-        const { data: transactionsData } = await dataQuery
-
-        if (transactionsData) {
-          // Fetch user info for transactions
-          const userIds = [...new Set(transactionsData.map((t) => t.user_id))]
-          const { data: usersData } = await supabase
-            .from('profiles')
-            .select('id, email, full_name')
-            .in('id', userIds)
-
-          // Merge user data with transactions
-          const transactionsWithUsers = transactionsData.map((tx) => ({
-            ...tx,
-            user: usersData?.find((u) => u.id === tx.user_id),
+        if (demoData) {
+          // Map demo_donations to transaction format
+          const transactionsWithUsers = demoData.map((d) => ({
+            id: d.id,
+            user_id: d.id,
+            type: 'donation' as const,
+            amount: d.amount,
+            created_at: d.created_at,
+            user: {
+              full_name: d.donor_name || 'Anonymous',
+              email: d.impact_description || '',
+            },
           }))
 
           setTransactions(transactionsWithUsers)
