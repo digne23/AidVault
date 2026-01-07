@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '../../hooks/useAuth'
 import { useVault } from '../../hooks/useVault'
+import { usePreferences } from '../../contexts/PreferencesContext'
 import AddFundsModal from '../../components/AddFundsModal'
 import { ImpactSummary } from '../../components/ImpactCalculator'
 import { VaultPageSkeleton } from '../../components/Skeleton'
@@ -11,6 +12,7 @@ import { InlineError } from '../../components/ErrorBoundary'
 export default function Vault() {
   const { t } = useTranslation('vault')
   const { user } = useAuth()
+  const { formatCurrency } = usePreferences()
   const {
     vault,
     transactions,
@@ -115,7 +117,7 @@ export default function Vault() {
                 <div>
                   <p className="text-emerald-100 text-sm font-medium">{t('yourVaultBalance')}</p>
                   <p className="text-4xl font-bold mt-2">
-                    {vault?.balance ? Number(vault.balance).toLocaleString() : '0'} RWF
+                    {formatCurrency(vault?.balance ? Number(vault.balance) : 0)}
                   </p>
                   <p className="text-emerald-100 text-sm mt-2">
                     {t('balanceBreakdown')}
@@ -182,7 +184,7 @@ export default function Vault() {
                 <div>
                   <h2 className="text-lg font-semibold text-gray-900 dark:text-white">{t('projectedDonation')}</h2>
                   <p className="text-3xl font-bold text-emerald-600 dark:text-emerald-400 mt-2">
-                    {projectedDonation.toLocaleString()} RWF
+                    {formatCurrency(projectedDonation)}
                   </p>
                   <p className="text-gray-500 dark:text-gray-400 text-sm mt-2">
                     {t('donationPercentage')}
@@ -257,7 +259,7 @@ export default function Vault() {
                             : 'text-pink-600 dark:text-pink-400'
                         }`}
                       >
-                        {tx.type === 'deposit' ? '+' : '-'}{Number(tx.amount).toLocaleString()} RWF
+                        {tx.type === 'deposit' ? '+' : '-'}{formatCurrency(Number(tx.amount))}
                       </span>
                     </div>
                   ))}
@@ -274,7 +276,7 @@ export default function Vault() {
               <div className="space-y-4">
                 <div>
                   <p className="text-blue-100 text-sm">{t('totalDonated')}</p>
-                  <p className="text-3xl font-bold">{totalDonated.toLocaleString()} RWF</p>
+                  <p className="text-3xl font-bold">{formatCurrency(totalDonated)}</p>
                 </div>
                 {totalDonated > 0 && (
                   <div className="pt-4 border-t border-white/20">

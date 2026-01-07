@@ -44,6 +44,7 @@ export default function Header() {
     { to: '/', label: t('home') },
     { to: '/about', label: t('about') },
     { to: '/how-it-works', label: t('howItWorks') },
+    { to: '/partners', label: t('partners') },
     { to: '/dashboard', label: t('dashboard') },
   ]
 
@@ -51,6 +52,7 @@ export default function Header() {
     { to: '/user/vault', label: t('vault') },
     { to: '/user/donate', label: t('donate') },
     { to: '/user/history', label: t('history') },
+    { to: '/partners', label: t('partners') },
     { to: '/dashboard', label: t('dashboard') },
   ]
 
