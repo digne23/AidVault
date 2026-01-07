@@ -1,238 +1,244 @@
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
 
-interface Partner {
+interface PartnerWithLogo {
   name: string
   logo: string
-  description: string
-  type: 'sponsor' | 'tech' | 'ngo' | 'government'
-  country: string
   website: string
+  description: string
 }
 
-// Logo component with error handling and fallback
-function PartnerLogo({ src, name, type }: { src: string; name: string; type: string }) {
-  const [hasError, setHasError] = useState(false)
+interface PartnerWithAbbrev {
+  name: string
+  abbrev: string
+  color: string
+  textColor?: string
+  website: string
+  description: string
+}
 
-  const getTypeBgColor = (partnerType: string) => {
-    switch (partnerType) {
-      case 'sponsor':
-        return 'from-emerald-500 to-teal-600'
-      case 'tech':
-        return 'from-blue-500 to-indigo-600'
-      case 'ngo':
-        return 'from-pink-500 to-rose-600'
-      case 'government':
-        return 'from-amber-500 to-orange-600'
-      default:
-        return 'from-gray-500 to-gray-600'
-    }
-  }
+type Partner = PartnerWithLogo | PartnerWithAbbrev
 
-  if (hasError) {
-    // Fallback placeholder with initials
-    const initials = name
-      .split(' ')
-      .map((word) => word[0])
-      .join('')
-      .substring(0, 3)
-      .toUpperCase()
+function isPartnerWithLogo(partner: Partner): partner is PartnerWithLogo {
+  return 'logo' in partner
+}
 
-    return (
-      <div
-        className={`w-full h-full bg-gradient-to-br ${getTypeBgColor(type)} rounded-lg flex items-center justify-center`}
+// Styled logo component for partners with abbreviations
+function AbbrevLogo({ abbrev, color, textColor = '#FFFFFF' }: { abbrev: string; color: string; textColor?: string }) {
+  return (
+    <div
+      className="w-full h-full flex items-center justify-center rounded-lg"
+      style={{ backgroundColor: color }}
+    >
+      <span
+        className="font-bold text-center leading-tight"
+        style={{
+          color: textColor,
+          fontSize: abbrev.length > 5 ? '0.75rem' : abbrev.length > 3 ? '0.875rem' : '1.125rem'
+        }}
       >
-        <span className="text-white font-bold text-sm">{initials}</span>
-      </div>
-    )
-  }
+        {abbrev}
+      </span>
+    </div>
+  )
+}
 
+// Image logo component with error handling
+function ImageLogo({ src, alt }: { src: string; alt: string }) {
   return (
     <img
       src={src}
-      alt={`${name} logo`}
-      className="w-full h-full object-contain"
-      onError={() => setHasError(true)}
+      alt={alt}
+      className="w-full h-full object-contain p-2"
       loading="lazy"
     />
   )
 }
 
-const partners: Partner[] = [
-  // Rwandan Financial Partners
+// Partner card component
+function PartnerCard({ partner, category }: { partner: Partner; category: string }) {
+  return (
+    <a
+      href={partner.website}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg hover:border-emerald-300 dark:hover:border-emerald-600 transition-all duration-300 overflow-hidden"
+    >
+      {/* Logo Container - Fixed Size */}
+      <div className="h-20 w-full bg-gray-50 dark:bg-gray-700 flex items-center justify-center p-3 border-b border-gray-100 dark:border-gray-600">
+        <div className="w-24 h-12">
+          {isPartnerWithLogo(partner) ? (
+            <ImageLogo src={partner.logo} alt={`${partner.name} logo`} />
+          ) : (
+            <AbbrevLogo abbrev={partner.abbrev} color={partner.color} textColor={partner.textColor} />
+          )}
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="p-4">
+        <div className="flex items-start justify-between gap-2">
+          <h3 className="font-semibold text-gray-900 dark:text-white text-sm group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+            {partner.name}
+          </h3>
+          <svg className="w-4 h-4 text-gray-400 group-hover:text-emerald-500 transition-colors flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </div>
+        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">{category}</p>
+        <p className="text-sm text-gray-600 dark:text-gray-400 mt-2 line-clamp-2">
+          {partner.description}
+        </p>
+      </div>
+    </a>
+  )
+}
+
+// Partners data
+const financialPartners: Partner[] = [
   {
     name: 'Bank of Kigali',
-    logo: 'https://logo.clearbit.com/bk.rw',
-    description: "Rwanda's leading commercial bank supporting financial inclusion and digital banking initiatives.",
-    type: 'sponsor',
-    country: 'Rwanda',
+    abbrev: 'BK',
+    color: '#003366',
     website: 'https://www.bk.rw',
+    description: "Rwanda's leading commercial bank supporting financial inclusion initiatives.",
   },
   {
-    name: 'Equity Bank Rwanda',
-    logo: 'https://logo.clearbit.com/equitybankgroup.com',
-    description: 'Regional banking partner enabling secure savings infrastructure and microfinance services.',
-    type: 'sponsor',
-    country: 'Rwanda',
+    name: 'Equity Bank',
+    abbrev: 'EQUITY',
+    color: '#8B0000',
     website: 'https://www.equitybankgroup.com',
+    description: 'Regional banking partner enabling secure savings and microfinance services.',
   },
   {
-    name: 'I&M Bank Rwanda',
-    logo: 'https://logo.clearbit.com/imbank.com',
-    description: 'Commercial bank providing secure fund management and transaction processing.',
-    type: 'sponsor',
-    country: 'Rwanda',
+    name: 'I&M Bank',
+    abbrev: 'I&M',
+    color: '#C8102E',
     website: 'https://www.imbank.com',
+    description: 'Commercial bank providing secure fund management and transactions.',
   },
-  // Tech Partners
-  {
-    name: 'MTN Rwanda',
-    logo: 'https://logo.clearbit.com/mtn.com',
-    description: 'Mobile money partner enabling seamless MoMo transactions across Rwanda.',
-    type: 'tech',
-    country: 'Rwanda',
-    website: 'https://www.mtn.co.rw',
-  },
-  {
-    name: 'Airtel Rwanda',
-    logo: 'https://logo.clearbit.com/airtel.com',
-    description: 'Telecommunications partner expanding Airtel Money payment accessibility.',
-    type: 'tech',
-    country: 'Rwanda',
-    website: 'https://www.airtel.co.rw',
-  },
-  {
-    name: 'Mastercard Foundation',
-    logo: 'https://logo.clearbit.com/mastercardfdn.org',
-    description: 'Global payment technology partner enabling secure international transactions.',
-    type: 'tech',
-    country: 'USA',
-    website: 'https://mastercardfdn.org',
-  },
-  {
-    name: 'Visa',
-    logo: 'https://logo.clearbit.com/visa.com',
-    description: 'International payment network supporting cross-border donations and payments.',
-    type: 'tech',
-    country: 'USA',
-    website: 'https://www.visa.com',
-  },
-  // International NGOs
-  {
-    name: 'UNICEF',
-    logo: 'https://logo.clearbit.com/unicef.org',
-    description: "United Nations children's agency supporting education and child welfare programs.",
-    type: 'ngo',
-    country: 'International',
-    website: 'https://www.unicef.org',
-  },
-  {
-    name: 'Save the Children',
-    logo: 'https://logo.clearbit.com/savethechildren.org',
-    description: 'Global NGO partner focused on child welfare and educational support programs.',
-    type: 'ngo',
-    country: 'UK',
-    website: 'https://www.savethechildren.org',
-  },
-  {
-    name: 'World Vision',
-    logo: 'https://logo.clearbit.com/worldvision.org',
-    description: 'International humanitarian organization supporting community development.',
-    type: 'ngo',
-    country: 'USA',
-    website: 'https://www.worldvision.org',
-  },
-  // Government & Development Partners
-  {
-    name: 'MINEDUC',
-    logo: 'https://logo.clearbit.com/mineduc.gov.rw',
-    description: 'Ministry of Education ensuring alignment with national education policies.',
-    type: 'government',
-    country: 'Rwanda',
-    website: 'https://www.mineduc.gov.rw',
-  },
-  {
-    name: 'RISA',
-    logo: 'https://logo.clearbit.com/risa.rw',
-    description: 'Rwanda Information Society Authority - digital transformation and e-government partner.',
-    type: 'government',
-    country: 'Rwanda',
-    website: 'https://www.risa.rw',
-  },
-  {
-    name: 'RDB',
-    logo: 'https://logo.clearbit.com/rdb.rw',
-    description: 'Rwanda Development Board - national development agency supporting innovation.',
-    type: 'government',
-    country: 'Rwanda',
-    website: 'https://www.rdb.rw',
-  },
-  // International Development Partners
   {
     name: 'World Bank',
-    logo: 'https://logo.clearbit.com/worldbank.org',
-    description: 'International financial institution supporting education sector investments.',
-    type: 'sponsor',
-    country: 'International',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/8/87/World_Bank_logo.svg',
     website: 'https://www.worldbank.org',
-  },
-  {
-    name: 'USAID',
-    logo: 'https://logo.clearbit.com/usaid.gov',
-    description: 'U.S. development agency supporting education and economic growth programs.',
-    type: 'ngo',
-    country: 'USA',
-    website: 'https://www.usaid.gov',
-  },
-  {
-    name: 'UK FCDO',
-    logo: 'https://logo.clearbit.com/gov.uk',
-    description: 'UK Foreign, Commonwealth & Development Office supporting education initiatives.',
-    type: 'ngo',
-    country: 'UK',
-    website: 'https://www.gov.uk/fcdo',
-  },
-  {
-    name: 'GIZ',
-    logo: 'https://logo.clearbit.com/giz.de',
-    description: 'German development agency supporting vocational training and education.',
-    type: 'ngo',
-    country: 'Germany',
-    website: 'https://www.giz.de',
+    description: 'International financial institution supporting education investments.',
   },
   {
     name: 'African Development Bank',
-    logo: 'https://logo.clearbit.com/afdb.org',
-    description: 'Continental development bank financing education infrastructure projects.',
-    type: 'sponsor',
-    country: 'International',
+    abbrev: 'AfDB',
+    color: '#00A651',
     website: 'https://www.afdb.org',
+    description: 'Continental bank financing education infrastructure projects.',
   },
 ]
 
-const partnerTypes = [
-  { key: 'sponsor', label: 'Financial & Development Partners', color: 'emerald' },
-  { key: 'tech', label: 'Technology Partners', color: 'blue' },
-  { key: 'ngo', label: 'NGO & Humanitarian Partners', color: 'pink' },
-  { key: 'government', label: 'Government Partners', color: 'amber' },
+const techPartners: Partner[] = [
+  {
+    name: 'MTN Rwanda',
+    abbrev: 'MTN',
+    color: '#FFCC00',
+    textColor: '#000000',
+    website: 'https://www.mtn.co.rw',
+    description: 'Mobile money partner enabling seamless MoMo transactions.',
+  },
+  {
+    name: 'Airtel Rwanda',
+    abbrev: 'airtel',
+    color: '#ED1C24',
+    website: 'https://www.airtel.co.rw',
+    description: 'Telecommunications partner expanding Airtel Money accessibility.',
+  },
+  {
+    name: 'Visa',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg',
+    website: 'https://www.visa.com',
+    description: 'International payment network for cross-border donations.',
+  },
+  {
+    name: 'Mastercard Foundation',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg',
+    website: 'https://mastercardfdn.org',
+    description: 'Global payment technology enabling secure transactions.',
+  },
 ]
 
-export default function Partners() {
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'sponsor':
-        return 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400'
-      case 'tech':
-        return 'bg-blue-500/20 text-blue-600 dark:text-blue-400'
-      case 'ngo':
-        return 'bg-pink-500/20 text-pink-600 dark:text-pink-400'
-      case 'government':
-        return 'bg-amber-500/20 text-amber-600 dark:text-amber-400'
-      default:
-        return 'bg-gray-500/20 text-gray-600 dark:text-gray-400'
-    }
-  }
+const ngoPartners: Partner[] = [
+  {
+    name: 'UNICEF',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/e/ed/Logo_of_UNICEF.svg',
+    website: 'https://www.unicef.org',
+    description: "UN children's agency supporting education and child welfare.",
+  },
+  {
+    name: 'USAID',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/7/79/USAID-Identity.svg',
+    website: 'https://www.usaid.gov',
+    description: 'U.S. agency supporting education and economic growth.',
+  },
+  {
+    name: 'UK FCDO',
+    abbrev: 'FCDO',
+    color: '#012169',
+    website: 'https://www.gov.uk/fcdo',
+    description: 'UK Foreign Office supporting education initiatives.',
+  },
+  {
+    name: 'GIZ',
+    abbrev: 'GIZ',
+    color: '#E30613',
+    website: 'https://www.giz.de',
+    description: 'German agency supporting vocational training and education.',
+  },
+  {
+    name: 'Save the Children',
+    abbrev: 'SC',
+    color: '#E31837',
+    website: 'https://www.savethechildren.org',
+    description: 'Global NGO focused on child welfare and education.',
+  },
+  {
+    name: 'World Vision',
+    abbrev: 'WV',
+    color: '#FF6600',
+    website: 'https://www.worldvision.org',
+    description: 'Humanitarian organization supporting community development.',
+  },
+]
 
+const govPartners: Partner[] = [
+  {
+    name: 'MINEDUC',
+    abbrev: 'MINEDUC',
+    color: '#00A651',
+    website: 'https://www.mineduc.gov.rw',
+    description: 'Ministry of Education ensuring national policy alignment.',
+  },
+  {
+    name: 'RISA',
+    abbrev: 'RISA',
+    color: '#00A651',
+    website: 'https://www.risa.rw',
+    description: 'Rwanda Information Society Authority - digital transformation.',
+  },
+  {
+    name: 'RDB',
+    abbrev: 'RDB',
+    color: '#003366',
+    website: 'https://www.rdb.rw',
+    description: 'Rwanda Development Board supporting innovation.',
+  },
+]
+
+const partnerCategories = [
+  { key: 'financial', label: 'Financial & Development Partners', partners: financialPartners, color: 'emerald' },
+  { key: 'tech', label: 'Technology Partners', partners: techPartners, color: 'blue' },
+  { key: 'ngo', label: 'NGO & Humanitarian Partners', partners: ngoPartners, color: 'pink' },
+  { key: 'gov', label: 'Government Partners', partners: govPartners, color: 'amber' },
+]
+
+// All partners for the logo grid
+const allPartners = [...financialPartners, ...techPartners, ...ngoPartners, ...govPartners]
+
+export default function Partners() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Hero Section */}
@@ -253,7 +259,7 @@ export default function Partners() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <p className="text-3xl sm:text-4xl font-bold text-emerald-600 dark:text-emerald-400">18+</p>
+              <p className="text-3xl sm:text-4xl font-bold text-emerald-600 dark:text-emerald-400">{allPartners.length}+</p>
               <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Active Partners</p>
             </div>
             <div>
@@ -274,85 +280,57 @@ export default function Partners() {
         </div>
       </section>
 
-      {/* Partners by Category */}
-      <section className="py-12 sm:py-16">
+      {/* Logo Cloud Section */}
+      <section className="py-12 bg-gray-100 dark:bg-gray-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {partnerTypes.map((type) => {
-            const typePartners = partners.filter((p) => p.type === type.key)
-            if (typePartners.length === 0) return null
-
-            return (
-              <div key={type.key} className="mb-12 last:mb-0">
-                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                  {type.label}
-                </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {typePartners.map((partner) => (
-                    <a
-                      key={partner.name}
-                      href={partner.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg hover:border-emerald-300 dark:hover:border-emerald-700 transition-all group"
-                    >
-                      <div className="flex items-start gap-4">
-                        <div className="w-14 h-14 flex-shrink-0 overflow-hidden rounded-lg bg-white p-2 border border-gray-100 dark:border-gray-600 group-hover:grayscale-0 transition-all">
-                          <PartnerLogo src={partner.logo} name={partner.name} type={partner.type} />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <h3 className="font-semibold text-gray-900 dark:text-white text-sm mb-1 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                            {partner.name}
-                          </h3>
-                          <div className="flex items-center gap-2 flex-wrap">
-                            <span className={`inline-block px-2 py-0.5 rounded-full text-xs font-medium ${getTypeColor(partner.type)}`}>
-                              {type.label.split(' ')[0]}
-                            </span>
-                            <span className="text-xs text-gray-500 dark:text-gray-400">
-                              {partner.country}
-                            </span>
-                          </div>
-                        </div>
-                        <svg className="w-4 h-4 text-gray-400 group-hover:text-emerald-500 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </div>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
-                        {partner.description}
-                      </p>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      </section>
-
-      {/* Partner Logos Grid - Compact View */}
-      <section className="py-12 sm:py-16 bg-white dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-            Trusted By Leading Organizations
+          <h2 className="text-center text-lg font-semibold text-gray-600 dark:text-gray-400 mb-8">
+            Trusted by Leading Organizations
           </h2>
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-9 gap-6 items-center justify-items-center">
-            {partners.map((partner) => (
+          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
+            {allPartners.map((partner) => (
               <a
                 key={partner.name}
                 href={partner.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-16 h-16 p-2 bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 hover:shadow-md hover:scale-105 transition-all grayscale hover:grayscale-0"
+                className="w-28 h-14 bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 p-2 hover:shadow-md hover:scale-105 transition-all duration-300 grayscale hover:grayscale-0 opacity-70 hover:opacity-100"
                 title={partner.name}
               >
-                <PartnerLogo src={partner.logo} name={partner.name} type={partner.type} />
+                {isPartnerWithLogo(partner) ? (
+                  <ImageLogo src={partner.logo} alt={partner.name} />
+                ) : (
+                  <AbbrevLogo abbrev={partner.abbrev} color={partner.color} textColor={partner.textColor} />
+                )}
               </a>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Partners by Category */}
+      <section className="py-12 sm:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {partnerCategories.map((category) => (
+            <div key={category.key} className="mb-12 last:mb-0">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-6">
+                {category.label}
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {category.partners.map((partner) => (
+                  <PartnerCard
+                    key={partner.name}
+                    partner={partner}
+                    category={category.label.split(' ')[0]}
+                  />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Partner Countries CTA */}
-      <section className="py-12 sm:py-16 bg-gray-100 dark:bg-gray-900">
+      <section className="py-12 sm:py-16 bg-white dark:bg-gray-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
             Global Reach
@@ -374,12 +352,12 @@ export default function Partners() {
       </section>
 
       {/* Become a Partner CTA */}
-      <section className="py-12 sm:py-16 bg-white dark:bg-gray-800">
+      <section className="py-12 sm:py-16 bg-gradient-to-br from-emerald-600 to-teal-700 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">
             Become a Partner
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+          <p className="text-emerald-100 mb-8 max-w-2xl mx-auto">
             Join our mission to transform education funding in Rwanda. Whether you're
             a financial institution, technology company, NGO, or government agency,
             there's a place for you in our growing network.
@@ -387,7 +365,7 @@ export default function Partners() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:partners@aidvault.org"
-              className="inline-flex items-center justify-center px-6 py-3 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-colors"
+              className="inline-flex items-center justify-center px-6 py-3 bg-white text-emerald-700 font-medium rounded-lg hover:bg-emerald-50 transition-colors"
             >
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -396,7 +374,7 @@ export default function Partners() {
             </a>
             <Link
               to="/about"
-              className="inline-flex items-center justify-center px-6 py-3 bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-medium rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors"
+              className="inline-flex items-center justify-center px-6 py-3 bg-emerald-500/20 text-white font-medium rounded-lg border border-white/30 hover:bg-emerald-500/30 transition-colors"
             >
               Learn More About Us
             </Link>
