@@ -63,9 +63,9 @@ function PartnerCard({ partner, category }: { partner: Partner; category: string
       rel="noopener noreferrer"
       className="group bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg hover:border-emerald-300 dark:hover:border-emerald-600 transition-all duration-300 overflow-hidden"
     >
-      {/* Logo Container - Fixed Size */}
-      <div className="h-20 w-full bg-gray-50 dark:bg-gray-700 flex items-center justify-center p-3 border-b border-gray-100 dark:border-gray-600">
-        <div className="w-24 h-12">
+      {/* Logo Container - 60% of card */}
+      <div className="h-40 w-full bg-gray-50 dark:bg-gray-700 flex items-center justify-center p-4">
+        <div className="w-full h-full max-w-[160px] max-h-[120px]">
           {isPartnerWithLogo(partner) ? (
             <ImageLogo src={partner.logo} alt={`${partner.name} logo`} />
           ) : (
@@ -75,7 +75,7 @@ function PartnerCard({ partner, category }: { partner: Partner; category: string
       </div>
 
       {/* Content */}
-      <div className="p-4">
+      <div className="p-3 border-t border-gray-100 dark:border-gray-600">
         <div className="flex items-start justify-between gap-2">
           <h3 className="font-semibold text-gray-900 dark:text-white text-sm group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
             {partner.name}
@@ -85,9 +85,6 @@ function PartnerCard({ partner, category }: { partner: Partner; category: string
           </svg>
         </div>
         <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">{category}</p>
-        <p className="text-sm text-gray-600 dark:text-gray-400 mt-2 line-clamp-2">
-          {partner.description}
-        </p>
       </div>
     </a>
   )
@@ -272,14 +269,14 @@ export default function Partners() {
           <h2 className="text-center text-lg font-semibold text-gray-600 dark:text-gray-400 mb-8">
             Trusted by Leading Organizations
           </h2>
-          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
+          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
             {allPartners.map((partner) => (
               <a
                 key={partner.name}
                 href={partner.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-28 h-14 bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 p-2 hover:shadow-md hover:scale-105 transition-all duration-300 grayscale hover:grayscale-0 opacity-70 hover:opacity-100"
+                className="w-40 h-24 bg-white dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600 p-3 hover:shadow-lg hover:scale-105 transition-all duration-300"
                 title={partner.name}
               >
                 {isPartnerWithLogo(partner) ? (
