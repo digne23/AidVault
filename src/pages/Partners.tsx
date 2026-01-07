@@ -54,37 +54,22 @@ function ImageLogo({ src, alt }: { src: string; alt: string }) {
   )
 }
 
-// Partner card component
-function PartnerCard({ partner, category }: { partner: Partner; category: string }) {
+// Partner logo component - simple logo display
+function PartnerLogo({ partner }: { partner: Partner }) {
   return (
     <a
       href={partner.website}
       target="_blank"
       rel="noopener noreferrer"
-      className="group bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg hover:border-emerald-300 dark:hover:border-emerald-600 transition-all duration-300 overflow-hidden"
+      className="group flex items-center justify-center p-2 hover:scale-105 transition-transform duration-300"
+      title={partner.name}
     >
-      {/* Logo Container - 60% of card */}
-      <div className="h-32 sm:h-36 md:h-40 w-full bg-gray-50 dark:bg-gray-700 flex items-center justify-center p-3 sm:p-4">
-        <div className="w-full h-full max-w-[140px] sm:max-w-[160px] max-h-[100px] sm:max-h-[120px]">
-          {isPartnerWithLogo(partner) ? (
-            <ImageLogo src={partner.logo} alt={`${partner.name} logo`} />
-          ) : (
-            <AbbrevLogo abbrev={partner.abbrev} color={partner.color} textColor={partner.textColor} />
-          )}
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="p-2 sm:p-3 border-t border-gray-100 dark:border-gray-600">
-        <div className="flex items-start justify-between gap-2">
-          <h3 className="font-semibold text-gray-900 dark:text-white text-xs sm:text-sm group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
-            {partner.name}
-          </h3>
-          <svg className="w-3 h-3 sm:w-4 sm:h-4 text-gray-400 group-hover:text-emerald-500 transition-colors flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-          </svg>
-        </div>
-        <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5 sm:mt-1">{category}</p>
+      <div className="w-28 h-20 sm:w-36 sm:h-24 md:w-44 md:h-28">
+        {isPartnerWithLogo(partner) ? (
+          <ImageLogo src={partner.logo} alt={partner.name} />
+        ) : (
+          <AbbrevLogo abbrev={partner.abbrev} color={partner.color} textColor={partner.textColor} />
+        )}
       </div>
     </a>
   )
@@ -264,19 +249,19 @@ export default function Partners() {
       </section>
 
       {/* Logo Cloud Section */}
-      <section className="py-10 sm:py-12 bg-gray-100 dark:bg-gray-800/50">
+      <section className="py-10 sm:py-14 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center text-base sm:text-lg font-semibold text-gray-600 dark:text-gray-400 mb-6 sm:mb-8">
+          <h2 className="text-center text-base sm:text-lg font-semibold text-gray-600 dark:text-gray-400 mb-8 sm:mb-10">
             Trusted by Leading Organizations
           </h2>
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3 sm:gap-4 md:gap-6">
+          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12">
             {allPartners.map((partner) => (
               <a
                 key={partner.name}
                 href={partner.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="aspect-[4/3] bg-white dark:bg-gray-700 rounded-lg sm:rounded-xl border border-gray-200 dark:border-gray-600 p-2 sm:p-3 hover:shadow-lg hover:scale-105 transition-all duration-300"
+                className="w-24 h-16 sm:w-32 sm:h-20 md:w-40 md:h-24 hover:scale-110 transition-transform duration-300"
                 title={partner.name}
               >
                 {isPartnerWithLogo(partner) ? (
@@ -291,20 +276,16 @@ export default function Partners() {
       </section>
 
       {/* Partners by Category */}
-      <section className="py-12 sm:py-16">
+      <section className="py-12 sm:py-16 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {partnerCategories.map((category) => (
-            <div key={category.key} className="mb-12 last:mb-0">
-              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-6">
+            <div key={category.key} className="mb-14 last:mb-0">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
                 {category.label}
               </h2>
-              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+              <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-10 md:gap-12 lg:gap-14">
                 {category.partners.map((partner) => (
-                  <PartnerCard
-                    key={partner.name}
-                    partner={partner}
-                    category={category.label.split(' ')[0]}
-                  />
+                  <PartnerLogo key={partner.name} partner={partner} />
                 ))}
               </div>
             </div>
