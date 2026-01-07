@@ -69,8 +69,17 @@ export default function Header() {
 
   // Get user initials for avatar
   const getUserInitials = () => {
+    const fullName = user?.user_metadata?.full_name
+    if (fullName) {
+      return fullName.split(' ').map((n: string) => n[0]).join('').toUpperCase().slice(0, 2)
+    }
     if (!user?.email) return 'U'
     return user.email.charAt(0).toUpperCase()
+  }
+
+  // Get user avatar URL
+  const getUserAvatar = () => {
+    return user?.user_metadata?.avatar_url || null
   }
 
   return (
@@ -138,9 +147,17 @@ export default function Header() {
                     aria-expanded={isUserDropdownOpen}
                     aria-haspopup="true"
                   >
-                    <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center text-white font-medium text-sm">
-                      {getUserInitials()}
-                    </div>
+                    {getUserAvatar() ? (
+                      <img
+                        src={getUserAvatar()!}
+                        alt="Profile"
+                        className="w-8 h-8 rounded-full object-cover"
+                      />
+                    ) : (
+                      <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center text-white font-medium text-sm">
+                        {getUserInitials()}
+                      </div>
+                    )}
                     <svg
                       className={`w-4 h-4 text-gray-500 dark:text-gray-400 transition-transform ${isUserDropdownOpen ? 'rotate-180' : ''}`}
                       fill="none"
@@ -283,9 +300,17 @@ export default function Header() {
           {user && (
             <div className="p-4 border-b border-gray-100 dark:border-gray-800">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center text-white font-medium">
-                  {getUserInitials()}
-                </div>
+                {getUserAvatar() ? (
+                  <img
+                    src={getUserAvatar()!}
+                    alt="Profile"
+                    className="w-10 h-10 rounded-full object-cover"
+                  />
+                ) : (
+                  <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center text-white font-medium">
+                    {getUserInitials()}
+                  </div>
+                )}
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-medium text-gray-900 dark:text-white truncate">{user.email}</p>
                   <p className="text-xs text-gray-500 dark:text-gray-400">{t('member')}</p>
