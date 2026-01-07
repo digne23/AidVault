@@ -248,20 +248,17 @@ export default function Partners() {
         </div>
       </section>
 
-      {/* Logo Cloud Section */}
-      <section className="py-10 sm:py-14 bg-white dark:bg-gray-800">
+      {/* All Partners - Single Display */}
+      <section className="py-12 sm:py-16 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center text-base sm:text-lg font-semibold text-gray-600 dark:text-gray-400 mb-8 sm:mb-10">
-            Trusted by Leading Organizations
-          </h2>
-          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12">
+          <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-10 md:gap-12 lg:gap-16">
             {allPartners.map((partner) => (
               <a
                 key={partner.name}
                 href={partner.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-24 h-16 sm:w-32 sm:h-20 md:w-40 md:h-24 hover:scale-110 transition-transform duration-300"
+                className="w-32 h-24 sm:w-40 sm:h-28 md:w-48 md:h-32 hover:scale-110 transition-transform duration-300"
                 title={partner.name}
               >
                 {isPartnerWithLogo(partner) ? (
@@ -272,24 +269,6 @@ export default function Partners() {
               </a>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Partners by Category */}
-      <section className="py-12 sm:py-16 bg-gray-50 dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {partnerCategories.map((category) => (
-            <div key={category.key} className="mb-14 last:mb-0">
-              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-                {category.label}
-              </h2>
-              <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-10 md:gap-12 lg:gap-14">
-                {category.partners.map((partner) => (
-                  <PartnerLogo key={partner.name} partner={partner} />
-                ))}
-              </div>
-            </div>
-          ))}
         </div>
       </section>
 

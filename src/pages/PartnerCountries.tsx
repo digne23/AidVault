@@ -179,95 +179,25 @@ export default function PartnerCountries() {
         </div>
       </section>
 
-      {/* World Map Visualization */}
-      <section className="py-12 sm:py-16">
+      {/* Country Flags - Single Display */}
+      <section className="py-12 sm:py-16 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              Global Presence
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              From our headquarters in Kigali, Rwanda, we collaborate with partners worldwide
-              to bring educational opportunities to children who need them most.
-            </p>
-          </div>
-
-          {/* Countries Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12">
             {countries.map((country) => (
               <div
                 key={country.name}
-                className={`p-4 rounded-xl border ${getRegionColor(country.region)} hover:shadow-lg transition-shadow cursor-pointer group`}
+                className="flex flex-col items-center hover:scale-110 transition-transform duration-300 cursor-default"
+                title={country.name}
               >
-                <div className="text-center">
-                  <span className="text-4xl mb-2 block group-hover:scale-110 transition-transform">
-                    {country.flag}
-                  </span>
-                  <h3 className="font-semibold text-gray-900 dark:text-white text-sm">
-                    {country.name}
-                  </h3>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                    {country.partnerTypes.length} partner type{country.partnerTypes.length > 1 ? 's' : ''}
-                  </p>
-                </div>
+                <span className="text-5xl sm:text-6xl md:text-7xl">
+                  {country.flag}
+                </span>
+                <span className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-2 font-medium">
+                  {country.name}
+                </span>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Countries by Region */}
-      <section className="py-12 sm:py-16 bg-white dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {regions.map((region) => {
-            const regionCountries = countries.filter((c) => c.region === region.key)
-            if (regionCountries.length === 0) return null
-
-            return (
-              <div key={region.key} className="mb-12 last:mb-0">
-                <div className="flex items-center gap-3 mb-6">
-                  <span
-                    className={`px-3 py-1 rounded-full text-sm font-medium ${getRegionColor(region.key)}`}
-                  >
-                    {region.label}
-                  </span>
-                  <span className="text-gray-500 dark:text-gray-400 text-sm">
-                    {regionCountries.length} {regionCountries.length === 1 ? 'country' : 'countries'}
-                  </span>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {regionCountries.map((country) => (
-                    <div
-                      key={country.name}
-                      className="bg-gray-50 dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700"
-                    >
-                      <div className="flex items-start gap-4">
-                        <span className="text-4xl">{country.flag}</span>
-                        <div className="flex-1">
-                          <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
-                            {country.name}
-                          </h3>
-                          <div className="flex flex-wrap gap-1 mb-3">
-                            {country.partnerTypes.map((type) => (
-                              <span
-                                key={type}
-                                className="px-2 py-0.5 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs"
-                              >
-                                {type}
-                              </span>
-                            ))}
-                          </div>
-                          <p className="text-sm text-gray-600 dark:text-gray-400">
-                            {country.description}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )
-          })}
         </div>
       </section>
 
