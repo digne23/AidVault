@@ -118,7 +118,7 @@ export default function Landing() {
                     </div>
                     <div>
                       <p className="text-gray-500 text-xs">{t('childrenHelped')}</p>
-                      <p className="text-gray-900 font-semibold">5 Students</p>
+                      <p className="text-gray-900 font-semibold">2,783 Children</p>
                     </div>
                   </div>
                 </div>
@@ -264,7 +264,7 @@ export default function Landing() {
                 </svg>
               </div>
               <p className="text-4xl sm:text-5xl font-bold text-amber-400 mb-2">
-                <AnimatedCounter end={2550} />
+                <AnimatedCounter end={2783} />
               </p>
               <p className="text-gray-400">{t('childrenHelped')}</p>
             </div>

@@ -18,6 +18,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import NotFound from './pages/NotFound'
 import Partners from './pages/Partners'
+import PartnerCountries from './pages/PartnerCountries'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import Terms from './pages/Terms'
 import CookiePolicy from './pages/CookiePolicy'
@@ -55,6 +56,7 @@ function App() {
                 <Route path="login" element={<Login />} />
                 <Route path="register" element={<Register />} />
                 <Route path="partners" element={<Partners />} />
+                <Route path="partner-countries" element={<PartnerCountries />} />
                 <Route path="privacy" element={<PrivacyPolicy />} />
                 <Route path="terms" element={<Terms />} />
                 <Route path="cookies" element={<CookiePolicy />} />

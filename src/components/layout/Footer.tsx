@@ -128,8 +128,8 @@ export default function Footer() {
                 <div>
                   <p className="text-sm text-gray-500">{t('location')}</p>
                   <p className="text-gray-300">
-                    {t('globalOrganization')}<br />
-                    {t('countriesCount')}
+                    {t('address')}<br />
+                    {t('globalReach')}
                   </p>
                 </div>
               </li>
