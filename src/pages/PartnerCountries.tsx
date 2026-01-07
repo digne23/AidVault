@@ -180,19 +180,22 @@ export default function PartnerCountries() {
       </section>
 
       {/* Country Flags - Single Display */}
-      <section className="py-12 sm:py-16 bg-white dark:bg-gray-800">
+      <section className="py-16 sm:py-20 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-10 text-center">
+            Our Partner Countries
+          </h2>
+          <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-10 md:gap-12 lg:gap-14">
             {countries.map((country) => (
               <div
                 key={country.name}
                 className="flex flex-col items-center hover:scale-110 transition-transform duration-300 cursor-default"
                 title={country.name}
               >
-                <span className="text-5xl sm:text-6xl md:text-7xl">
+                <span className="text-6xl sm:text-7xl md:text-8xl">
                   {country.flag}
                 </span>
-                <span className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-2 font-medium">
+                <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mt-3 font-medium">
                   {country.name}
                 </span>
               </div>
