@@ -55,9 +55,9 @@ export default function AdminDonations() {
     async function fetchDonations() {
       setLoading(true)
       try {
-        // Get all donations for stats (from demo_donations for demo purposes)
+        // Get all donations for stats
         const { data: allDonations, count } = await supabase
-          .from('demo_donations')
+          .from('donations')
           .select('*', { count: 'exact' })
           .order('created_at', { ascending: false })
 
@@ -95,25 +95,27 @@ export default function AdminDonations() {
           )
         }
 
-        // Fetch paginated donations from demo_donations
+        // Fetch paginated donations
         const from = (currentPage - 1) * donationsPerPage
         const to = from + donationsPerPage - 1
 
         const { data: paginatedDonations } = await supabase
-          .from('demo_donations')
+          .from('donations')
           .select('*')
           .order('created_at', { ascending: false })
           .range(from, to)
 
         if (paginatedDonations) {
-          // Map demo_donations to match expected format
+          // Fetch user info
+          const userIds = [...new Set(paginatedDonations.map((d) => d.user_id))]
+          const { data: usersData } = await supabase
+            .from('profiles')
+            .select('id, email, full_name')
+            .in('id', userIds)
+
           const donationsWithUsers = paginatedDonations.map((d) => ({
             ...d,
-            user_id: d.id,
-            user: {
-              full_name: d.donor_name || 'Anonymous',
-              email: d.impact_description || '',
-            },
+            user: usersData?.find((u) => u.id === d.user_id),
           }))
 
           setDonations(donationsWithUsers)

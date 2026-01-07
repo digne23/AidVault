@@ -34,45 +34,44 @@ export default function AdminTransactions() {
     async function fetchTransactions() {
       setLoading(true)
       try {
-        // Use demo_donations as transactions for demo purposes
-        // All demo_donations are treated as 'donation' type transactions
-        const { count } = await supabase
-          .from('demo_donations')
-          .select('*', { count: 'exact' })
-          .order('created_at', { ascending: false })
+        // Build query for real transactions
+        let countQuery = supabase.from('transactions').select('*', { count: 'exact', head: true })
 
-        // Filter by type if needed (only 'donation' or 'all' will show demo data)
-        if (filter !== 'all' && filter !== 'donation') {
-          setTotalTransactions(0)
-          setTransactions([])
-          setLoading(false)
-          return
+        if (filter !== 'all') {
+          countQuery = countQuery.eq('type', filter)
         }
 
+        const { count } = await countQuery
         setTotalTransactions(count || 0)
 
-        // Fetch with pagination
+        // Fetch transactions with pagination
         const from = (currentPage - 1) * transactionsPerPage
         const to = from + transactionsPerPage - 1
 
-        const { data: paginatedData } = await supabase
-          .from('demo_donations')
+        let dataQuery = supabase
+          .from('transactions')
           .select('*')
           .order('created_at', { ascending: false })
           .range(from, to)
 
-        if (paginatedData) {
-          // Map demo_donations to transaction format
-          const transactionsWithUsers = paginatedData.map((d) => ({
-            id: d.id,
-            user_id: d.id,
-            type: 'donation' as const,
-            amount: d.amount,
-            created_at: d.created_at,
-            user: {
-              full_name: d.donor_name || 'Anonymous',
-              email: d.impact_description || '',
-            },
+        if (filter !== 'all') {
+          dataQuery = dataQuery.eq('type', filter)
+        }
+
+        const { data: transactionsData } = await dataQuery
+
+        if (transactionsData) {
+          // Fetch user info for transactions
+          const userIds = [...new Set(transactionsData.map((t) => t.user_id))]
+          const { data: usersData } = await supabase
+            .from('profiles')
+            .select('id, email, full_name')
+            .in('id', userIds)
+
+          // Merge user data with transactions
+          const transactionsWithUsers = transactionsData.map((tx) => ({
+            ...tx,
+            user: usersData?.find((u) => u.id === tx.user_id),
           }))
 
           setTransactions(transactionsWithUsers)
