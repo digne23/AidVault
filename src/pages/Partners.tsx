@@ -1,169 +1,80 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 interface Partner {
   name: string
-  logo: React.ReactNode
+  logo: string
   description: string
   type: 'sponsor' | 'tech' | 'ngo' | 'government'
   country: string
 }
 
-// SVG Logo Components for real brand recognition
-const BKLogo = () => (
-  <svg viewBox="0 0 100 40" className="w-full h-full">
-    <rect width="100" height="40" fill="#00529B" rx="4"/>
-    <text x="50" y="26" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold" fontFamily="Arial">BK</text>
-    <text x="50" y="36" textAnchor="middle" fill="#FFD700" fontSize="6" fontFamily="Arial">Bank of Kigali</text>
-  </svg>
-)
+// Logo component with error handling and fallback
+function PartnerLogo({ src, name, type }: { src: string; name: string; type: string }) {
+  const [hasError, setHasError] = useState(false)
 
-const MTNLogo = () => (
-  <svg viewBox="0 0 100 40" className="w-full h-full">
-    <rect width="100" height="40" fill="#FFCC00" rx="4"/>
-    <text x="50" y="28" textAnchor="middle" fill="#000" fontSize="18" fontWeight="bold" fontFamily="Arial">MTN</text>
-  </svg>
-)
+  const getTypeBgColor = (partnerType: string) => {
+    switch (partnerType) {
+      case 'sponsor':
+        return 'from-emerald-500 to-teal-600'
+      case 'tech':
+        return 'from-blue-500 to-indigo-600'
+      case 'ngo':
+        return 'from-pink-500 to-rose-600'
+      case 'government':
+        return 'from-amber-500 to-orange-600'
+      default:
+        return 'from-gray-500 to-gray-600'
+    }
+  }
 
-const AirtelLogo = () => (
-  <svg viewBox="0 0 100 40" className="w-full h-full">
-    <rect width="100" height="40" fill="#ED1C24" rx="4"/>
-    <text x="50" y="26" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold" fontFamily="Arial">airtel</text>
-  </svg>
-)
+  if (hasError) {
+    // Fallback placeholder with initials
+    const initials = name
+      .split(' ')
+      .map((word) => word[0])
+      .join('')
+      .substring(0, 3)
+      .toUpperCase()
 
-const EquityLogo = () => (
-  <svg viewBox="0 0 100 40" className="w-full h-full">
-    <rect width="100" height="40" fill="#8B0000" rx="4"/>
-    <text x="50" y="26" textAnchor="middle" fill="white" fontSize="12" fontWeight="bold" fontFamily="Arial">EQUITY</text>
-    <text x="50" y="36" textAnchor="middle" fill="#FFD700" fontSize="6" fontFamily="Arial">BANK</text>
-  </svg>
-)
+    return (
+      <div
+        className={`w-full h-full bg-gradient-to-br ${getTypeBgColor(type)} rounded flex items-center justify-center`}
+      >
+        <span className="text-white font-bold text-sm">{initials}</span>
+      </div>
+    )
+  }
 
-const RISALogo = () => (
-  <svg viewBox="0 0 100 40" className="w-full h-full">
-    <rect width="100" height="40" fill="#00A651" rx="4"/>
-    <text x="50" y="28" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold" fontFamily="Arial">RISA</text>
-  </svg>
-)
-
-const UNICEFLogo = () => (
-  <svg viewBox="0 0 100 40" className="w-full h-full">
-    <rect width="100" height="40" fill="#00AEEF" rx="4"/>
-    <text x="50" y="26" textAnchor="middle" fill="white" fontSize="12" fontWeight="bold" fontFamily="Arial">UNICEF</text>
-  </svg>
-)
-
-const WorldBankLogo = () => (
-  <svg viewBox="0 0 100 40" className="w-full h-full">
-    <rect width="100" height="40" fill="#002244" rx="4"/>
-    <text x="50" y="20" textAnchor="middle" fill="white" fontSize="8" fontWeight="bold" fontFamily="Arial">WORLD</text>
-    <text x="50" y="32" textAnchor="middle" fill="#FFD700" fontSize="10" fontWeight="bold" fontFamily="Arial">BANK</text>
-  </svg>
-)
-
-const USAIDLogo = () => (
-  <svg viewBox="0 0 100 40" className="w-full h-full">
-    <rect width="100" height="40" fill="#002868" rx="4"/>
-    <text x="50" y="26" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold" fontFamily="Arial">USAID</text>
-    <rect x="10" y="30" width="20" height="4" fill="#BF0A30"/>
-  </svg>
-)
-
-const DFIDLogo = () => (
-  <svg viewBox="0 0 100 40" className="w-full h-full">
-    <rect width="100" height="40" fill="#4A0080" rx="4"/>
-    <text x="50" y="20" textAnchor="middle" fill="white" fontSize="8" fontFamily="Arial">UK AID</text>
-    <text x="50" y="32" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold" fontFamily="Arial">FCDO</text>
-  </svg>
-)
-
-const GIZLogo = () => (
-  <svg viewBox="0 0 100 40" className="w-full h-full">
-    <rect width="100" height="40" fill="#E30613" rx="4"/>
-    <text x="50" y="28" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold" fontFamily="Arial">GIZ</text>
-  </svg>
-)
-
-const AfDBLogo = () => (
-  <svg viewBox="0 0 100 40" className="w-full h-full">
-    <rect width="100" height="40" fill="#006341" rx="4"/>
-    <text x="50" y="26" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold" fontFamily="Arial">AfDB</text>
-  </svg>
-)
-
-const SaveChildrenLogo = () => (
-  <svg viewBox="0 0 100 40" className="w-full h-full">
-    <rect width="100" height="40" fill="#E31837" rx="4"/>
-    <text x="50" y="18" textAnchor="middle" fill="white" fontSize="8" fontFamily="Arial">SAVE THE</text>
-    <text x="50" y="30" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold" fontFamily="Arial">CHILDREN</text>
-  </svg>
-)
-
-const WorldVisionLogo = () => (
-  <svg viewBox="0 0 100 40" className="w-full h-full">
-    <rect width="100" height="40" fill="#FF6600" rx="4"/>
-    <text x="50" y="18" textAnchor="middle" fill="white" fontSize="8" fontFamily="Arial">WORLD</text>
-    <text x="50" y="30" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold" fontFamily="Arial">VISION</text>
-  </svg>
-)
-
-const MastercardLogo = () => (
-  <svg viewBox="0 0 100 40" className="w-full h-full">
-    <rect width="100" height="40" fill="#1A1F71" rx="4"/>
-    <circle cx="40" cy="20" r="12" fill="#EB001B"/>
-    <circle cx="60" cy="20" r="12" fill="#F79E1B"/>
-    <ellipse cx="50" cy="20" rx="6" ry="10" fill="#FF5F00"/>
-  </svg>
-)
-
-const VisaLogo = () => (
-  <svg viewBox="0 0 100 40" className="w-full h-full">
-    <rect width="100" height="40" fill="#1A1F71" rx="4"/>
-    <text x="50" y="28" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold" fontStyle="italic" fontFamily="Arial">VISA</text>
-  </svg>
-)
-
-const MINEDUCLogo = () => (
-  <svg viewBox="0 0 100 40" className="w-full h-full">
-    <rect width="100" height="40" fill="#00A651" rx="4"/>
-    <text x="50" y="18" textAnchor="middle" fill="#FFD700" fontSize="7" fontFamily="Arial">MINEDUC</text>
-    <text x="50" y="30" textAnchor="middle" fill="white" fontSize="6" fontFamily="Arial">Rwanda</text>
-  </svg>
-)
-
-const RDBLogo = () => (
-  <svg viewBox="0 0 100 40" className="w-full h-full">
-    <rect width="100" height="40" fill="#003366" rx="4"/>
-    <text x="50" y="28" textAnchor="middle" fill="#00A651" fontSize="16" fontWeight="bold" fontFamily="Arial">RDB</text>
-  </svg>
-)
-
-const IMLogo = () => (
-  <svg viewBox="0 0 100 40" className="w-full h-full">
-    <rect width="100" height="40" fill="#C8102E" rx="4"/>
-    <text x="50" y="28" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold" fontFamily="Arial">I&M</text>
-  </svg>
-)
+  return (
+    <img
+      src={src}
+      alt={`${name} logo`}
+      className="w-full h-full object-contain rounded"
+      onError={() => setHasError(true)}
+    />
+  )
+}
 
 const partners: Partner[] = [
   // Rwandan Financial Partners
   {
     name: 'Bank of Kigali',
-    logo: <BKLogo />,
+    logo: 'https://logo.clearbit.com/bk.rw',
     description: "Rwanda's leading commercial bank supporting financial inclusion and digital banking initiatives.",
     type: 'sponsor',
     country: 'Rwanda',
   },
   {
     name: 'Equity Bank Rwanda',
-    logo: <EquityLogo />,
+    logo: 'https://logo.clearbit.com/equitybankgroup.com',
     description: 'Regional banking partner enabling secure savings infrastructure and microfinance services.',
     type: 'sponsor',
     country: 'Rwanda',
   },
   {
     name: 'I&M Bank Rwanda',
-    logo: <IMLogo />,
+    logo: 'https://logo.clearbit.com/imbank.com',
     description: 'Commercial bank providing secure fund management and transaction processing.',
     type: 'sponsor',
     country: 'Rwanda',
@@ -171,28 +82,28 @@ const partners: Partner[] = [
   // Tech Partners
   {
     name: 'MTN Rwanda',
-    logo: <MTNLogo />,
+    logo: 'https://logo.clearbit.com/mtn.com',
     description: 'Mobile money partner enabling seamless MoMo transactions across Rwanda.',
     type: 'tech',
     country: 'Rwanda',
   },
   {
     name: 'Airtel Rwanda',
-    logo: <AirtelLogo />,
+    logo: 'https://logo.clearbit.com/airtel.com',
     description: 'Telecommunications partner expanding Airtel Money payment accessibility.',
     type: 'tech',
     country: 'Rwanda',
   },
   {
     name: 'Mastercard Foundation',
-    logo: <MastercardLogo />,
+    logo: 'https://logo.clearbit.com/mastercardfdn.org',
     description: 'Global payment technology partner enabling secure international transactions.',
     type: 'tech',
     country: 'USA',
   },
   {
     name: 'Visa Inc.',
-    logo: <VisaLogo />,
+    logo: 'https://logo.clearbit.com/visa.com',
     description: 'International payment network supporting cross-border donations and payments.',
     type: 'tech',
     country: 'USA',
@@ -200,21 +111,21 @@ const partners: Partner[] = [
   // International NGOs
   {
     name: 'UNICEF Rwanda',
-    logo: <UNICEFLogo />,
+    logo: 'https://logo.clearbit.com/unicef.org',
     description: "United Nations children's agency supporting education and child welfare programs.",
     type: 'ngo',
     country: 'International',
   },
   {
     name: 'Save the Children',
-    logo: <SaveChildrenLogo />,
+    logo: 'https://logo.clearbit.com/savethechildren.org',
     description: 'Global NGO partner focused on child welfare and educational support programs.',
     type: 'ngo',
     country: 'UK',
   },
   {
     name: 'World Vision Rwanda',
-    logo: <WorldVisionLogo />,
+    logo: 'https://logo.clearbit.com/worldvision.org',
     description: 'International humanitarian organization supporting community development.',
     type: 'ngo',
     country: 'USA',
@@ -222,21 +133,21 @@ const partners: Partner[] = [
   // Government & Development Partners
   {
     name: 'MINEDUC Rwanda',
-    logo: <MINEDUCLogo />,
+    logo: 'https://logo.clearbit.com/mineduc.gov.rw',
     description: 'Ministry of Education ensuring alignment with national education policies.',
     type: 'government',
     country: 'Rwanda',
   },
   {
     name: 'RISA',
-    logo: <RISALogo />,
+    logo: 'https://logo.clearbit.com/risa.rw',
     description: 'Rwanda Information Society Authority - digital transformation and e-government partner.',
     type: 'government',
     country: 'Rwanda',
   },
   {
     name: 'Rwanda Development Board',
-    logo: <RDBLogo />,
+    logo: 'https://logo.clearbit.com/rdb.rw',
     description: 'National development agency supporting innovation and sustainable growth.',
     type: 'government',
     country: 'Rwanda',
@@ -244,35 +155,35 @@ const partners: Partner[] = [
   // International Development Partners
   {
     name: 'World Bank',
-    logo: <WorldBankLogo />,
+    logo: 'https://logo.clearbit.com/worldbank.org',
     description: 'International financial institution supporting education sector investments.',
     type: 'sponsor',
     country: 'International',
   },
   {
     name: 'USAID',
-    logo: <USAIDLogo />,
+    logo: 'https://logo.clearbit.com/usaid.gov',
     description: 'U.S. development agency supporting education and economic growth programs.',
     type: 'ngo',
     country: 'USA',
   },
   {
     name: 'UK FCDO',
-    logo: <DFIDLogo />,
+    logo: 'https://logo.clearbit.com/gov.uk',
     description: 'UK Foreign, Commonwealth & Development Office supporting education initiatives.',
     type: 'ngo',
     country: 'UK',
   },
   {
     name: 'GIZ Rwanda',
-    logo: <GIZLogo />,
+    logo: 'https://logo.clearbit.com/giz.de',
     description: 'German development agency supporting vocational training and education.',
     type: 'ngo',
     country: 'Germany',
   },
   {
     name: 'African Development Bank',
-    logo: <AfDBLogo />,
+    logo: 'https://logo.clearbit.com/afdb.org',
     description: 'Continental development bank financing education infrastructure projects.',
     type: 'sponsor',
     country: 'International',
@@ -362,8 +273,8 @@ export default function Partners() {
                       className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow"
                     >
                       <div className="flex items-start gap-4">
-                        <div className="w-20 h-10 flex-shrink-0 overflow-hidden rounded">
-                          {partner.logo}
+                        <div className="w-16 h-16 flex-shrink-0 overflow-hidden rounded bg-white p-2 border border-gray-100 dark:border-gray-700">
+                          <PartnerLogo src={partner.logo} name={partner.name} type={partner.type} />
                         </div>
                         <div className="flex-1 min-w-0">
                           <h3 className="font-semibold text-gray-900 dark:text-white text-sm mb-1">
