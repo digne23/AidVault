@@ -17,11 +17,13 @@ import {
 } from 'recharts'
 import { usePlatformStats } from '../hooks/usePlatformStats'
 import { DashboardPageSkeleton } from '../components/Skeleton'
+import { usePreferences } from '../contexts/PreferencesContext'
 
 const COLORS = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444']
 
 export default function Dashboard() {
   const { t } = useTranslation('dashboard')
+  const { formatCurrency } = usePreferences()
   const {
     totalDonated,
     totalSavings,
@@ -35,15 +37,6 @@ export default function Dashboard() {
     lastUpdated,
     loading,
   } = usePlatformStats()
-
-  const formatCurrency = (value: number) => {
-    return new Intl.NumberFormat('en-RW', {
-      style: 'currency',
-      currency: 'RWF',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    }).format(value)
-  }
 
   const formatNumber = (value: number) => {
     return new Intl.NumberFormat('en-US').format(value)

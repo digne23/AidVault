@@ -14,6 +14,7 @@ import {
   ResponsiveContainer,
 } from 'recharts'
 import { supabase } from '../../lib/supabase'
+import { usePreferences } from '../../contexts/PreferencesContext'
 
 interface StatsData {
   totalUsers: number
@@ -41,6 +42,7 @@ interface RecentDonation {
 const COLORS = ['#6366F1', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6']
 
 export default function AdminDashboard() {
+  const { formatCurrency } = usePreferences()
   const [stats, setStats] = useState<StatsData>({
     totalUsers: 0,
     totalDonations: 0,
@@ -53,15 +55,6 @@ export default function AdminDashboard() {
   const [recentDonations, setRecentDonations] = useState<RecentDonation[]>([])
   const [loading, setLoading] = useState(true)
   const [monthlyData, setMonthlyData] = useState<{ month: string; donations: number; users: number }[]>([])
-
-  const formatCurrency = (value: number) => {
-    return new Intl.NumberFormat('en-RW', {
-      style: 'currency',
-      currency: 'RWF',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    }).format(value)
-  }
 
   const formatNumber = (value: number) => {
     return new Intl.NumberFormat('en-US').format(value)

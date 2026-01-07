@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { usePreferences } from '../../contexts/PreferencesContext'
 import {
   AreaChart,
   Area,
@@ -26,6 +27,7 @@ const TUITION_MONTH_COST = 97500
 const CHILD_SUPPORT_COST = 260000
 
 export default function AdminAnalytics() {
+  const { formatCurrency } = usePreferences()
   const [loading, setLoading] = useState(true)
   const [totalDonated, setTotalDonated] = useState(0)
   const [totalSavings, setTotalSavings] = useState(0)
@@ -34,15 +36,6 @@ export default function AdminAnalytics() {
   const [userGrowth, setUserGrowth] = useState<{ month: string; users: number }[]>([])
   const [donationRanges, setDonationRanges] = useState<{ range: string; count: number }[]>([])
   const [transactionTypes, setTransactionTypes] = useState<{ type: string; count: number }[]>([])
-
-  const formatCurrency = (value: number) => {
-    return new Intl.NumberFormat('en-RW', {
-      style: 'currency',
-      currency: 'RWF',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    }).format(value)
-  }
 
   const formatNumber = (value: number) => {
     return new Intl.NumberFormat('en-US').format(value)

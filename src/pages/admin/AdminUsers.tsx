@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { supabase } from '../../lib/supabase'
+import { usePreferences } from '../../contexts/PreferencesContext'
 
 interface User {
   id: string
@@ -13,21 +14,13 @@ interface User {
 }
 
 export default function AdminUsers() {
+  const { formatCurrency } = usePreferences()
   const [users, setUsers] = useState<User[]>([])
   const [loading, setLoading] = useState(true)
   const [searchTerm, setSearchTerm] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
   const [totalUsers, setTotalUsers] = useState(0)
   const usersPerPage = 10
-
-  const formatCurrency = (value: number) => {
-    return new Intl.NumberFormat('en-RW', {
-      style: 'currency',
-      currency: 'RWF',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    }).format(value)
-  }
 
   useEffect(() => {
     async function fetchUsers() {

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { usePreferences } from '../../contexts/PreferencesContext'
 import {
   BarChart,
   Bar,
@@ -29,6 +30,7 @@ interface DonationStats {
 }
 
 export default function AdminDonations() {
+  const { formatCurrency } = usePreferences()
   const [donations, setDonations] = useState<Donation[]>([])
   const [stats, setStats] = useState<DonationStats>({
     total: 0,
@@ -41,15 +43,6 @@ export default function AdminDonations() {
   const [totalDonations, setTotalDonations] = useState(0)
   const [monthlyData, setMonthlyData] = useState<{ month: string; amount: number }[]>([])
   const donationsPerPage = 10
-
-  const formatCurrency = (value: number) => {
-    return new Intl.NumberFormat('en-RW', {
-      style: 'currency',
-      currency: 'RWF',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    }).format(value)
-  }
 
   useEffect(() => {
     async function fetchDonations() {

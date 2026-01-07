@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { usePreferences } from '../../contexts/PreferencesContext'
 import { supabase } from '../../lib/supabase'
 
 interface Transaction {
@@ -14,21 +15,13 @@ interface Transaction {
 }
 
 export default function AdminTransactions() {
+  const { formatCurrency } = usePreferences()
   const [transactions, setTransactions] = useState<Transaction[]>([])
   const [loading, setLoading] = useState(true)
   const [filter, setFilter] = useState<string>('all')
   const [currentPage, setCurrentPage] = useState(1)
   const [totalTransactions, setTotalTransactions] = useState(0)
   const transactionsPerPage = 15
-
-  const formatCurrency = (value: number) => {
-    return new Intl.NumberFormat('en-RW', {
-      style: 'currency',
-      currency: 'RWF',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    }).format(value)
-  }
 
   useEffect(() => {
     async function fetchTransactions() {
