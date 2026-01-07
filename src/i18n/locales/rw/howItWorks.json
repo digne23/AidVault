@@ -1,78 +1,78 @@
 {
   "title": "Uko AidVault Ikora",
-  "subtitle": "Inzira yoroshye, igaragara ihindura ubwizigame bwawe ingaruka nyayo. Dore ibyo ukeneye kumenya byose ku kubika ku ntego.",
-  "processTitle": "Inzira",
-  "processSubtitle": "Intambwe Eshanu Zoroshye zo Gukora Itandukaniro",
-  "processDesc": "Kuva kwiyandikisha kugeza ku ngaruka - dore urugendo rwawe na AidVault",
+  "subtitle": "Uko bikorwa mu buryo bworoshye kandi busobanutse, buhindura amafaranga yawe ku ngaruka zifatika. Dore byose ugomba kumenya ku kuzigama ufite intego.",
+  "processTitle": "Uko Bikorwa",
+  "processSubtitle": "Intambwe 5 zoroshye zo Gutanga Impinduka",
+  "processDesc": "Uhereye ku kwiyandikisha kugeza ku ngaruka—dore urugendo rwawe muri AidVault",
   "steps": [
     {
       "title": "Fungura Konti Yawe",
-      "description": "Iyandikishe mu minota mike n'imeri yawe gusa. Nta gusuzuma inguzanyo, nta gahunda zihishwe. Urugendo rwawe rwo kubika ku ntego rutangira hano."
+      "description": "Iyandikishe mu minota mike ukoresheje imeri yawe gusa. Nta kugenzura credit, nta mafaranga y’ibanga. Urugendo rwawe rwo kuzigama ufite intego rutangira hano."
     },
     {
-      "title": "Ongeramo Amafaranga mu Bwizigame Bwawe",
-      "description": "Shyiramo amafaranga igihe icyo ari cyo cyose ushaka. Nta mibare mito - tangira n'ibyo wimerewe kandi ukurire."
+      "title": "Ongeramo Amafaranga muri Vault Yawe",
+      "description": "Shyiramo amafaranga igihe icyo ari cyo cyose ushaka. Nta n’aho hasi—tangira n’ayo wiyumvamo neza hanyuma ubyubake buhoro buhoro."
     },
     {
-      "title": "Reba Ubwizigame Bwawe Bukura",
-      "description": "Kurikirana aho ugeze ku kibaho cyawe bwite. Reba ubwizigame bwawe bukura kandi reba ingaruka zawe zishoboka ziyongera mu gihe nyacyo."
+      "title": "Reba Amafaranga Yawe Akura",
+      "description": "Kurikirana iterambere ryawe kuri dashboard yawe. Reba umubare w’amafaranga yawe ukura kandi urebe uko ingaruka yawe ishobora kwiyongera mu gihe nyacyo."
     },
     {
-      "title": "Tanga 20% ku Burezi",
-      "description": "Nyuma y'amezi 6, ubona uburenganzira bwo gutanga. 20% y'ubwizigame bwawe ijya ku buto ku gutanga ibikoresho by'ishuri n'ibikoresho by'uburezi."
+      "title": "Tanga 20% mu Burezi",
+      "description": "Nyuma y’amezi 6, uraba ushoboye gutanga inkunga. 20% by’amafaranga yawe ajya mu gutanga ibikoresho by’ishuri n’ibikoresho by’uburezi."
     },
     {
-      "title": "Reba Ingaruka Zawe & Subiramo",
-      "description": "Akira amakuru ku buryo impano yawe yafashije. Hanyuma tangira uruziga rushya rwo kubika kandi ukomeze gukora itandukaniro."
+      "title": "Reba Ingaruka Zawe & Ongera",
+      "description": "Uhabwa amakuru ku buryo inkunga yawe yafashije. Hanyuma utangire icyiciro gishya cyo kuzigama ukomeze gutanga impinduka."
     }
   ],
-  "journeyTitle": "Urugendo Rwawe rwo Kubika",
-  "journeySubtitle": "Reba Ingaruka Zawe Zikura mu Gihe",
-  "journeyDesc": "Buri gihe wongera amafaranga mu bwizigame bwawe, ntabwo uri kubika ku bwawe gusa - uri gushora mu ejo hazaza h'umwana. Dore uko urugendo rwawe rusa:",
+  "journeyTitle": "Urugendo Rwawe rwo Kuzigama",
+  "journeySubtitle": "Reba Ingaruka Zawe Zikura Mu Gihe",
+  "journeyDesc": "Buri gihe wongeramo amafaranga muri vault yawe, nturi kuzigama gusa ku nyungu zawe—uri gushora mu hazaza h’umwana. Dore uko urugendo rwawe rumeze:",
   "journeyFeatures": [
-    "Gukurikirana ubwizigame mu gihe nyacyo",
-    "Kubona aho ugeze ku ntego yo gutanga",
-    "Amateka yuzuye y'ibikorwa",
-    "Kubara iminsi yo kubona uburenganzira bwo gutanga"
+    "Kureba umubare w’amafaranga mu gihe nyacyo",
+    "Kureba iterambere mu ntego yawe yo gutanga inkunga",
+    "Amateka yose y’ibikorwa by’imari",
+    "Igihe gisigaye kugira ngo ube ushobora gutanga inkunga"
   ],
-  "yourVaultBalance": "Ubwizigame Bwawe",
-  "progressToDonation": "Aho Ugeze ku Gutanga",
-  "daysUntilEligible": "Hasigaye iminsi {{days}} kugirango ubone uburenganzira bwo gutanga",
-  "projectedDonation": "Impano Yateganijwe (20%)",
-  "projectedImpact": "Bihagije ku bikoresho by'ishuri by'abana {{count}}",
-  "recentActivity": "Ibikorwa Bya Vuba",
-  "deposit": "Inyongera",
-  "faqTitle": "FAQ",
+  "yourVaultBalance": "Amafaranga Ari muri Vault Yawe",
+  "progressToDonation": "Iterambere ryo Gutanga Inkunga",
+  "daysUntilEligible": "Hasigaye iminsi {{days}} mbere yo gushobora gutanga inkunga",
+  "projectedDonation": "Inkunga Iteganyijwe (20%)",
+  "projectedImpact": "Bihagije ku bikoresho by’ishuri by’abana {{count}}",
+  "recentActivity": "Ibikorwa Biheruka",
+  "deposit": "Amafaranga Yinjiye",
+  "faqTitle": "Ibibazo Bikunze Kubazwa (FAQ)",
   "faqSubtitle": "Ibibazo Bikunze Kubazwa",
-  "faqDesc": "Ibyo ukeneye kumenya byose ku kubika no gutanga na AidVault",
+  "faqDesc": "Byose ugomba kumenya ku kuzigama no gutanga inkunga muri AidVault",
   "faqs": [
     {
       "question": "Kuki amezi 6?",
-      "answer": "Igihe cy'amezi 6 kigufasha kubaka akamenyero keza ko kubika ukongera umutungo uhagije kugirango ukore ingaruka nyayo. Bituma kandi dushyira impano hamwe kugirango bikore neza, kugabanya amafaranga yo gucunga no kwemeza ko umusanzu wawe urushaho kugera ku bana bakeneye."
+      "answer": "Igihe cy’amezi 6 kigufasha gushyiraho umuco w’ukuzigama ufite icyo ugeraho mu gihe wongera amafaranga ahagije kugira ngo ugaragaze impinduka zifatika. Bituma kandi dutanga inkunga mu buryo bwagutse kandi butunganye, bigabanya amafaranga y’ubuyobozi kandi bigafasha ko inkunga nyinshi zigera ku bana bayikeneye."
     },
     {
       "question": "Kuki 20%?",
-      "answer": "Guhagararira 20% byagenewe kugira ingaruka ariko bikomeze. Bituma ukurira ku ntego zawe bwite ukagira n'umusanzu ukomeye ku burezi. Abenshi mu bakoresha bacu babona uku kugabana gutera intege - uri kubaka ejo hazaza hawe uri gushora mu ejo hazaza h'undi."
+      "answer": "Icyiyemezo cya 20% cyateguwe kugira ngo kibe gifite ingaruka kandi gishoboke. Bigufasha kuzigama ku ntego zawe kandi utanga umusanzu ukomeye mu burezi. Abakoresha benshi basanga ubu buryo bubaha imbaraga—uri kubaka ejo hawe uri gushora mu hazaza h’undi muntu."
     },
     {
-      "question": "Impano yanjye ijya he?",
-      "answer": "100% y'impano yawe ijya ku bikoresho n'ibindi bikoresho by'uburezi ku bana bakeneye. Dukorana n'amashuri y'abaparineri bemejwe n'amashyirahamwe mu bihugu 15+. Buri mpano ikurikiranwa, kandi uzakira amakuru ku ngaruka nyayo umusanzu wawe wakoze."
+      "question": "Inkunga yanjye igera hehe?",
+      "answer": "100% by’inkunga yawe ijya mu bikoresho by’ishuri no mu bikoresho by’uburezi by’abana bayikeneye. Dukorana n’amashuri n’imiryango yemewe mu bihugu birenga 15. Buri nkunga irakurikiranwa, kandi uzajya uhabwa amakuru ku ngaruka z’inkunga yawe."
     },
     {
-      "question": "Nshobora gutanga birenze 20%?",
-      "answer": "Yego! Iyo ugezeho intego yawe y'amezi 6, ushobora guhitamo gutanga kuva 20% kugeza 100% y'ubwizigame bwawe. Abenshi mu bakoresha bahitamo gutanga byinshi iyo bishoboka, kandi buri mubare wongerewe utanga itandukaniro ryinshi."
+      "question": "Nshobora gutanga arenze 20%?",
+      "answer": "Yego rwose! Iyo ugeze ku ntego y’amezi 6, ushobora guhitamo gutanga hagati ya 20% kugeza kuri 100% by’amafaranga yawe. Abakoresha benshi bahisemo gutanga arenze igihe babishoboye, kandi buri mafaranga y’inyongera agira ingaruka nini."
     },
     {
-      "question": "Nshobora gukura ubwizigame bwanjye?",
-      "answer": "Yego, amafaranga yawe ni ayawe buri gihe. Ariko, tugushishikariza kurangiza uruziga rw'amezi 6 kugirango ukore ingaruka nyinshi. Niba ukeneye gukura mbere y'igihe, urashobora kubikora igihe icyo ari cyo cyose, nubwo guhagararira 20% byakora ku buziga bwo kubika bw'ejo."
+      "question": "Nshobora gusohora amafaranga yanjye?",
+      "answer": "Yego, amafaranga yawe ni ayawe igihe cyose. Ariko turagushishikariza kurangiza icyiciro cy’amezi 6 kugira ngo wongere ingaruka yawe. Niba ukeneye gusohora mbere y’igihe, urashobora kubikora, ariko icyiyemezo cya 20% cyakurikizwa ku byiciro by’igihe kizaza."
     },
     {
-      "question": "Amafaranga yanjye ari mu mutekano?",
-      "answer": "Ubwizigame bwawe burindwa n'isanduku-mweru yo gukenera nk'iy'ibanki kandi ifitwe mu mafaranga agenzurwa. Dukoresha uburyo bwo kurinda bw'urwego rwo hejuru harimo isanduku-mweru SSL ya bit 256 n'kwemeza ku buryo bwinshi kugirango urinde konti yawe n'ubwizigame bwawe."
+      "question": "Amafaranga yanjye arizewe?",
+      "answer": "Amafaranga yawe arinzwe hakoreshejwe uburinzi bwa banki kandi abikwa muri konti zemewe. Dukoresha uburyo bugezweho bwo kurinda umutekano harimo 256-bit SSL encryption na two-factor authentication kurinda konti yawe n’amafaranga yawe."
     }
   ],
   "startJourney": "Witeguye Gutangira Urugendo Rwawe?",
-  "startJourneyDesc": "Ifatanye n'ibihumbi by'ababika barimo gukora itandukaniro mu buzima bw'abana bakubaka ejo hazaza habo bwite ry'amafaranga.",
-  "createFreeAccount": "Fungura Konti Yawe Ku Buntu",
-  "learnAboutUs": "Menya Ibyerekeye Twebwe"
+  "startJourneyDesc": "Injira mu bihumbi by’abazigama bari guhindura ubuzima bw’abana mu gihe bubaka ejo hazaza habo bwite.",
+  "createFreeAccount": "Fungura Konti Yawe Yubuntu",
+  "learnAboutUs": "Menya Ibyerekeye AidVault"
 }
