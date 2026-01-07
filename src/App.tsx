@@ -17,6 +17,10 @@ import Dashboard from './pages/Dashboard'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import NotFound from './pages/NotFound'
+import Partners from './pages/Partners'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import Terms from './pages/Terms'
+import CookiePolicy from './pages/CookiePolicy'
 
 // User Pages
 import Vault from './pages/user/Vault'
@@ -34,35 +38,6 @@ import AdminTransactions from './pages/admin/AdminTransactions'
 import AdminDonations from './pages/admin/AdminDonations'
 import AdminAnalytics from './pages/admin/AdminAnalytics'
 
-// Placeholder pages for new routes
-
-function PrivacyPolicy() {
-  return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-6">Privacy Policy</h1>
-      <p className="text-gray-600">Privacy policy content coming soon.</p>
-    </div>
-  )
-}
-
-function TermsOfService() {
-  return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-6">Terms of Service</h1>
-      <p className="text-gray-600">Terms of service content coming soon.</p>
-    </div>
-  )
-}
-
-function CookiePolicy() {
-  return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-6">Cookie Policy</h1>
-      <p className="text-gray-600">Cookie policy content coming soon.</p>
-    </div>
-  )
-}
-
 function App() {
   return (
     <ErrorBoundary>
@@ -79,8 +54,9 @@ function App() {
                 <Route path="dashboard" element={<Dashboard />} />
                 <Route path="login" element={<Login />} />
                 <Route path="register" element={<Register />} />
+                <Route path="partners" element={<Partners />} />
                 <Route path="privacy" element={<PrivacyPolicy />} />
-                <Route path="terms" element={<TermsOfService />} />
+                <Route path="terms" element={<Terms />} />
                 <Route path="cookies" element={<CookiePolicy />} />
               </Route>
 

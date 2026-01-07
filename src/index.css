@@ -5,13 +5,21 @@
 
 /* ========================================
    AidVault Typography System
+   Refined, smaller, consistent sizing
    ======================================== */
 
 /* Custom theme configuration */
 @theme {
-  /* Font families */
+  /* Font families - Clean, modern sans-serif */
   --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-heading: 'Poppins', 'Inter', system-ui, sans-serif;
+  --font-heading: 'Inter', system-ui, sans-serif;
+
+  /* Base font size - slightly smaller */
+  --text-base: 0.9375rem; /* 15px */
+  --text-sm: 0.8125rem; /* 13px */
+  --text-xs: 0.75rem; /* 12px */
+  --text-lg: 1rem; /* 16px */
+  --text-xl: 1.125rem; /* 18px */
 
   /* Brand colors */
   --color-brand-50: #ecfdf5;
@@ -30,43 +38,58 @@
 @layer base {
   html {
     font-family: var(--font-sans);
+    font-size: 15px; /* Smaller base size */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
   }
 
   body {
-    @apply text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-900;
+    @apply text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-900;
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    letter-spacing: -0.01em;
   }
 
-  /* Heading styles with Poppins */
+  /* Refined heading styles */
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    @apply font-semibold tracking-tight;
+    @apply font-semibold tracking-tight text-gray-900 dark:text-white;
+    line-height: 1.25;
   }
 
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold;
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold;
   }
 
   h2 {
-    @apply text-3xl md:text-4xl font-bold;
+    @apply text-xl sm:text-2xl md:text-3xl font-bold;
   }
 
   h3 {
-    @apply text-2xl md:text-3xl font-semibold;
+    @apply text-lg sm:text-xl md:text-2xl font-semibold;
   }
 
   h4 {
-    @apply text-xl md:text-2xl font-semibold;
+    @apply text-base sm:text-lg md:text-xl font-semibold;
   }
 
   h5 {
-    @apply text-lg md:text-xl font-medium;
+    @apply text-sm sm:text-base md:text-lg font-medium;
   }
 
   h6 {
-    @apply text-base md:text-lg font-medium;
+    @apply text-sm md:text-base font-medium;
+  }
+
+  /* Paragraph spacing */
+  p {
+    @apply text-gray-600 dark:text-gray-300;
+    line-height: 1.7;
+  }
+
+  /* Smaller default text for labels and secondary text */
+  small, .text-small {
+    font-size: 0.8125rem;
   }
 }
 

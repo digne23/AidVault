@@ -10,6 +10,7 @@ export default function Footer() {
     { to: '/about', label: t('aboutUs') },
     { to: '/mission', label: t('ourMission') },
     { to: '/how-it-works', label: t('howItWorks') },
+    { to: '/partners', label: t('partners') },
     { to: '/dashboard', label: t('publicDashboard') },
   ]
 
