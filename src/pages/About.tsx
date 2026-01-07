@@ -184,7 +184,13 @@ export default function About() {
             {team.map((member, index) => (
               <div key={index} className="text-center">
                 <div className={`w-32 h-32 bg-gradient-to-br ${teamColors[index % teamColors.length]} rounded-full flex items-center justify-center mx-auto mb-6 text-white text-3xl font-bold shadow-lg`}>
-                  {member.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
+                  {member.name
+                    .split(' ')
+                    .filter(n => !['Miss.', 'Mr.', 'Mrs.', 'Ms.', 'Dr.', 'Prof.'].includes(n))
+                    .map(n => n[0])
+                    .join('')
+                    .slice(0, 2)
+                    .toUpperCase()}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">{member.name}</h3>
                 <p className="text-blue-600 dark:text-blue-400 font-medium mb-4">{member.role}</p>
