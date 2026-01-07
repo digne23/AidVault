@@ -173,88 +173,99 @@ export function usePlatformStats(): PlatformStats & { refetch: () => Promise<voi
     setError(null)
 
     try {
-      // Try to fetch real data from Supabase
-      const { data: donationsData, error: donationsError } = await supabase
-        .from('donations')
-        .select('amount, created_at')
+      const now = new Date()
+      const placeholder = generatePlaceholderData()
+
+      // Fetch demo donations from Supabase (for public dashboard display)
+      const { data: demoDonations, error: demoError } = await supabase
+        .from('demo_donations')
+        .select('*')
         .order('created_at', { ascending: false })
 
-      const { data: vaultsData, error: vaultsError } = await supabase
+      // Fetch platform stats
+      const { data: platformStats } = await supabase
+        .from('platform_stats')
+        .select('*')
+        .eq('id', 1)
+        .single()
+
+      // Fetch real vaults for savings total
+      const { data: vaultsData } = await supabase
         .from('vaults')
         .select('balance')
 
-      // If we have real data, use it
-      if (!donationsError && !vaultsError && donationsData && vaultsData) {
-        const now = new Date()
+      if (!demoError && demoDonations && demoDonations.length > 0) {
+        // Calculate totals from demo_donations
+        const totalDonated = demoDonations.reduce((sum, d) => sum + Number(d.amount), 0)
+        const realTotalSavings = vaultsData?.reduce((sum, v) => sum + Number(v.balance), 0) || 0
 
-        // Calculate real totals
-        const realTotalDonated = donationsData.reduce((sum, d) => sum + Number(d.amount), 0)
-        const realTotalSavings = vaultsData.reduce((sum, v) => sum + Number(v.balance), 0)
-        const realActiveSavers = vaultsData.length
-        const realCompletedDonations = donationsData.length
+        // Calculate monthly donations from demo data
+        const monthlyMap = new Map<string, number>()
+        demoDonations.forEach((d) => {
+          const date = new Date(d.created_at)
+          const monthKey = date.toLocaleDateString('en-US', { month: 'short', year: '2-digit' })
+          monthlyMap.set(monthKey, (monthlyMap.get(monthKey) || 0) + Number(d.amount))
+        })
 
-        // If we have real data, merge with placeholder for charts
-        if (realCompletedDonations > 0 || realActiveSavers > 0) {
-          const placeholder = generatePlaceholderData()
-
-          // Calculate monthly donations from real data
-          const monthlyMap = new Map<string, number>()
-          donationsData.forEach((d) => {
-            const date = new Date(d.created_at)
-            const monthKey = date.toLocaleDateString('en-US', { month: 'short', year: '2-digit' })
-            monthlyMap.set(monthKey, (monthlyMap.get(monthKey) || 0) + Number(d.amount))
+        // Build monthly donations array
+        const monthlyDonations: MonthlyDonation[] = []
+        for (let i = 11; i >= 0; i--) {
+          const date = new Date(now.getFullYear(), now.getMonth() - i, 1)
+          const monthKey = date.toLocaleDateString('en-US', { month: 'short', year: '2-digit' })
+          monthlyDonations.push({
+            month: monthKey,
+            amount: monthlyMap.get(monthKey) || 0,
           })
-
-          // Use real monthly data if available, otherwise placeholder
-          const monthlyDonations =
-            monthlyMap.size > 0
-              ? placeholder.monthlyDonations.map((m) => ({
-                  ...m,
-                  amount: monthlyMap.get(m.month) || m.amount,
-                }))
-              : placeholder.monthlyDonations
-
-          // Recent donations from real data with Rwandan names
-          const rwandanNames = [
-            'Nshuti Daniel', 'Uwayezu Michael', 'Mugisha Samuel', 'Nsengiyumva Joseph',
-            'Habimana David', 'Niyonzima Paul', 'Bizimana John', 'Nkurunziza Peter',
-            'Manirakiza Andrew', 'Habyarimana Thomas', 'Rukundo James', 'Hakizimana Benjamin',
-          ]
-          const recentDonations: RecentDonation[] = donationsData.slice(0, 10).map((d, i) => ({
-            id: `real-donation-${i}`,
-            amount: Number(d.amount),
-            createdAt: new Date(d.created_at),
-            timeAgo: getTimeAgo(new Date(d.created_at)),
-            donorName: rwandanNames[i % rwandanNames.length],
-          }))
-
-          // Use real data where available
-          const totalDonated = realTotalDonated || placeholder.totalDonated
-          const impactMetrics: ImpactMetrics = {
-            schoolSupplies: Math.floor(totalDonated / SCHOOL_SUPPLIES_COST),
-            tuitionMonths: Math.floor(totalDonated / TUITION_MONTH_COST),
-            childrenSupported: Math.floor(totalDonated / CHILD_SUPPORT_COST),
-          }
-
-          setStats({
-            totalDonated: totalDonated,
-            totalSavings: realTotalSavings || placeholder.totalSavings,
-            activeSavers: realActiveSavers || placeholder.activeSavers,
-            completedDonations: realCompletedDonations || placeholder.completedDonations,
-            monthlyDonations,
-            growthData: placeholder.growthData,
-            donationDistribution: placeholder.donationDistribution,
-            recentDonations:
-              recentDonations.length > 0 ? recentDonations : placeholder.recentDonations,
-            impactMetrics,
-            lastUpdated: now,
-          })
-        } else {
-          // No real data, use placeholder
-          setStats(generatePlaceholderData())
         }
+
+        // Recent donations from demo_donations
+        const recentDonations: RecentDonation[] = demoDonations.slice(0, 10).map((d, i) => ({
+          id: d.id || `demo-donation-${i}`,
+          amount: Number(d.amount),
+          createdAt: new Date(d.created_at),
+          timeAgo: getTimeAgo(new Date(d.created_at)),
+          donorName: d.donor_name || 'Anonymous',
+        }))
+
+        // Impact metrics
+        const impactMetrics: ImpactMetrics = {
+          schoolSupplies: Math.floor(totalDonated / SCHOOL_SUPPLIES_COST),
+          tuitionMonths: Math.floor(totalDonated / TUITION_MONTH_COST),
+          childrenSupported: Math.floor(totalDonated / CHILD_SUPPORT_COST),
+        }
+
+        // Donation distribution from demo data
+        const distributionRanges = [
+          { range: '30K-65K RWF', min: 30000, max: 65000 },
+          { range: '65K-130K RWF', min: 65000, max: 130000 },
+          { range: '130K-300K RWF', min: 130000, max: 300000 },
+          { range: '300K+ RWF', min: 300000, max: Infinity },
+        ]
+        const donationDistribution: DonationDistribution[] = distributionRanges.map((range) => {
+          const count = demoDonations.filter(
+            (d) => Number(d.amount) >= range.min && Number(d.amount) < range.max
+          ).length
+          return {
+            range: range.range,
+            count,
+            percentage: Math.round((count / demoDonations.length) * 100),
+          }
+        })
+
+        setStats({
+          totalDonated: platformStats?.total_donated || totalDonated,
+          totalSavings: platformStats?.total_savings || realTotalSavings || placeholder.totalSavings,
+          activeSavers: platformStats?.total_users || vaultsData?.length || placeholder.activeSavers,
+          completedDonations: demoDonations.length,
+          monthlyDonations,
+          growthData: placeholder.growthData,
+          donationDistribution,
+          recentDonations,
+          impactMetrics,
+          lastUpdated: now,
+        })
       } else {
-        // Fallback to placeholder data if Supabase fails
+        // Fallback to placeholder data if no demo donations
         setStats(generatePlaceholderData())
       }
     } catch (err) {
